@@ -11,6 +11,8 @@
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
 		37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1D32ABB7187005280B5 /* Preview Assets.xcassets */; };
+		37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1E02ABB7F32005280B5 /* SignUpView.swift */; };
+		37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1E32ABB7F5B005280B5 /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		37C5A1CF2ABB7187005280B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C5A1D12ABB7187005280B5 /* NutritionNest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutritionNest.entitlements; sourceTree = "<group>"; };
 		37C5A1D32ABB7187005280B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37C5A1E02ABB7F32005280B5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		37C5A1E32ABB7F5B005280B5 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,8 @@
 		37C5A1CA2ABB7185005280B5 /* NutritionNest */ = {
 			isa = PBXGroup;
 			children = (
+				37C5A1DA2ABB7CB2005280B5 /* Views */,
 				37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */,
-				37C5A1CD2ABB7185005280B5 /* ContentView.swift */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
 				37C5A1D12ABB7187005280B5 /* NutritionNest.entitlements */,
 				37C5A1D22ABB7187005280B5 /* Preview Content */,
@@ -67,6 +71,40 @@
 				37C5A1D32ABB7187005280B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37C5A1DA2ABB7CB2005280B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37C5A1E22ABB7F38005280B5 /* LogInView */,
+				37C5A1DF2ABB7F1A005280B5 /* SignUpView */,
+				37C5A1DB2ABB7E51005280B5 /* ContentView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		37C5A1DB2ABB7E51005280B5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				37C5A1CD2ABB7185005280B5 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		37C5A1DF2ABB7F1A005280B5 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				37C5A1E02ABB7F32005280B5 /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		37C5A1E22ABB7F38005280B5 /* LogInView */ = {
+			isa = PBXGroup;
+			children = (
+				37C5A1E32ABB7F5B005280B5 /* LogInView.swift */,
+			);
+			path = LogInView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */,
+				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
+				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
