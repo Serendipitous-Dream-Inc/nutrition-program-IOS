@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		371E6A7C2ABB95BF009223D6 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 371E6A7B2ABB95BF009223D6 /* SwiftLintFramework */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
@@ -34,7 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371E6A7C2ABB95BF009223D6 /* SwiftLintFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +128,6 @@
 			);
 			name = NutritionNest;
 			packageProductDependencies = (
-				371E6A7B2ABB95BF009223D6 /* SwiftLintFramework */,
 			);
 			productName = NutritionNest;
 			productReference = 37C5A1C82ABB7185005280B5 /* NutritionNest.app */;
@@ -435,11 +432,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		371E6A7B2ABB95BF009223D6 /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
-		};
 		371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
