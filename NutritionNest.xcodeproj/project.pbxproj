@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371E6A7C2ABB95BF009223D6 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 371E6A7B2ABB95BF009223D6 /* SwiftLintFramework */; };
+		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				371E6A7C2ABB95BF009223D6 /* SwiftLintFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 		37C5A1BF2ABB7185005280B5 = {
 			isa = PBXGroup;
 			children = (
+				377FAE232ABB976A00877F37 /* .swiftlint.yml */,
 				37C5A1CA2ABB7185005280B5 /* NutritionNest */,
 				37C5A1C92ABB7185005280B5 /* Products */,
 			);
@@ -121,8 +126,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				371E6A7E2ABB95CD009223D6 /* PBXTargetDependency */,
 			);
 			name = NutritionNest;
+			packageProductDependencies = (
+				371E6A7B2ABB95BF009223D6 /* SwiftLintFramework */,
+			);
 			productName = NutritionNest;
 			productReference = 37C5A1C82ABB7185005280B5 /* NutritionNest.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 37C5A1BF2ABB7185005280B5;
+			packageReferences = (
+				371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 37C5A1C92ABB7185005280B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -165,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
 			);
@@ -185,6 +198,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		371E6A7E2ABB95CD009223D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		37C5A1D52ABB7187005280B5 /* Debug */ = {
@@ -402,6 +422,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		371E6A7B2ABB95BF009223D6 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37C5A1C02ABB7185005280B5 /* Project object */;
 }
