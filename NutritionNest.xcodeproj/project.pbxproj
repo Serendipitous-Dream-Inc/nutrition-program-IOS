@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
+		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374BB0832ABE5DC10010C707 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				374BB08B2ABE5E880010C707 /* Localization+Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		37C5A1BF2ABB7185005280B5 = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +71,12 @@
 		37C5A1CA2ABB7185005280B5 /* NutritionNest */ = {
 			isa = PBXGroup;
 			children = (
+				374BB0832ABE5DC10010C707 /* Constants */,
 				37C5A1DA2ABB7CB2005280B5 /* Views */,
 				37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
 				37C5A1D12ABB7187005280B5 /* NutritionNest.entitlements */,
+				374BB0882ABE5E350010C707 /* Localizable.strings */,
 				37C5A1D22ABB7187005280B5 /* Preview Content */,
 			);
 			path = NutritionNest;
@@ -175,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */,
+				374BB0862ABE5E350010C707 /* Localizable.strings in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
 			);
@@ -188,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */,
+				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
@@ -202,6 +218,17 @@
 			productRef = 371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		374BB0882ABE5E350010C707 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				374BB0872ABE5E350010C707 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		37C5A1D52ABB7187005280B5 /* Debug */ = {
