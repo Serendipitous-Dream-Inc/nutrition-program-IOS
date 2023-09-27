@@ -17,6 +17,7 @@
 		3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */; };
 		3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3D2AC3AED00018AB87 /* Injected.swift */; };
 		3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */; };
+		3799EF492AC3B0470018AB87 /* NutritionNestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -24,6 +25,16 @@
 		37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1E02ABB7F32005280B5 /* SignUpView.swift */; };
 		37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1E32ABB7F5B005280B5 /* LogInView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3799EF4A2AC3B0470018AB87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37C5A1C02ABB7185005280B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37C5A1C72ABB7185005280B5;
+			remoteInfo = NutritionNest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -36,6 +47,8 @@
 		3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
 		3799EF3D2AC3AED00018AB87 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationProvider.swift; sourceTree = "<group>"; };
+		3799EF462AC3B0470018AB87 /* NutritionNestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionNestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestTests.swift; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +60,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3799EF432AC3B0470018AB87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37C5A1C52ABB7185005280B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,11 +146,20 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		3799EF472AC3B0470018AB87 /* NutritionNestTests */ = {
+			isa = PBXGroup;
+			children = (
+				3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */,
+			);
+			path = NutritionNestTests;
+			sourceTree = "<group>";
+		};
 		37C5A1BF2ABB7185005280B5 = {
 			isa = PBXGroup;
 			children = (
 				377FAE232ABB976A00877F37 /* .swiftlint.yml */,
 				37C5A1CA2ABB7185005280B5 /* NutritionNest */,
+				3799EF472AC3B0470018AB87 /* NutritionNestTests */,
 				37C5A1C92ABB7185005280B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				37C5A1C82ABB7185005280B5 /* NutritionNest.app */,
+				3799EF462AC3B0470018AB87 /* NutritionNestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +234,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3799EF452AC3B0470018AB87 /* NutritionNestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3799EF4C2AC3B0470018AB87 /* Build configuration list for PBXNativeTarget "NutritionNestTests" */;
+			buildPhases = (
+				3799EF422AC3B0470018AB87 /* Sources */,
+				3799EF432AC3B0470018AB87 /* Frameworks */,
+				3799EF442AC3B0470018AB87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3799EF4B2AC3B0470018AB87 /* PBXTargetDependency */,
+			);
+			name = NutritionNestTests;
+			productName = NutritionNestTests;
+			productReference = 3799EF462AC3B0470018AB87 /* NutritionNestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37C5A1C72ABB7185005280B5 /* NutritionNest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37C5A1D72ABB7187005280B5 /* Build configuration list for PBXNativeTarget "NutritionNest" */;
@@ -231,9 +279,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					3799EF452AC3B0470018AB87 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 37C5A1C72ABB7185005280B5;
+					};
 					37C5A1C72ABB7185005280B5 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -256,11 +308,19 @@
 			projectRoot = "";
 			targets = (
 				37C5A1C72ABB7185005280B5 /* NutritionNest */,
+				3799EF452AC3B0470018AB87 /* NutritionNestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3799EF442AC3B0470018AB87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37C5A1C62ABB7185005280B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +336,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3799EF422AC3B0470018AB87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3799EF492AC3B0470018AB87 /* NutritionNestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37C5A1C42ABB7185005280B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +369,11 @@
 			isa = PBXTargetDependency;
 			productRef = 371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */;
 		};
+		3799EF4B2AC3B0470018AB87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37C5A1C72ABB7185005280B5 /* NutritionNest */;
+			targetProxy = 3799EF4A2AC3B0470018AB87 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -315,6 +388,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3799EF4D2AC3B0470018AB87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc..NutritionNestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutritionNest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NutritionNest";
+			};
+			name = Debug;
+		};
+		3799EF4E2AC3B0470018AB87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc..NutritionNestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NutritionNest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NutritionNest";
+			};
+			name = Release;
+		};
 		37C5A1D52ABB7187005280B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -517,6 +641,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3799EF4C2AC3B0470018AB87 /* Build configuration list for PBXNativeTarget "NutritionNestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3799EF4D2AC3B0470018AB87 /* Debug */,
+				3799EF4E2AC3B0470018AB87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37C5A1C32ABB7185005280B5 /* Build configuration list for PBXProject "NutritionNest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
