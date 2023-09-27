@@ -12,6 +12,11 @@
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
 		3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */; };
 		3799EF342AC3AAA80018AB87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF332AC3AAA80018AB87 /* User.swift */; };
+		3799EF362AC3AC030018AB87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3799EF352AC3AC030018AB87 /* GoogleService-Info.plist */; };
+		3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF392AC3AE710018AB87 /* InjectedValues.swift */; };
+		3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */; };
+		3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3D2AC3AED00018AB87 /* Injected.swift */; };
+		3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -26,6 +31,11 @@
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProviding.swift; sourceTree = "<group>"; };
 		3799EF332AC3AAA80018AB87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3799EF352AC3AC030018AB87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3799EF392AC3AE710018AB87 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		3799EF3D2AC3AED00018AB87 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationProvider.swift; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +68,7 @@
 		3799EF2D2AC3A8530018AB87 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3799EF352AC3AC030018AB87 /* GoogleService-Info.plist */,
 				374BB0882ABE5E350010C707 /* Localizable.strings */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
 			);
@@ -67,6 +78,7 @@
 		3799EF2E2AC3A87C0018AB87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3799EF3F2AC3AF0F0018AB87 /* Firebase */,
 				3799EF2F2AC3A8910018AB87 /* Protocols */,
 			);
 			path = Services;
@@ -86,6 +98,32 @@
 				3799EF332AC3AAA80018AB87 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3799EF372AC3AE050018AB87 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3799EF382AC3AE1E0018AB87 /* DependencyInjection */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3799EF382AC3AE1E0018AB87 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				3799EF392AC3AE710018AB87 /* InjectedValues.swift */,
+				3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */,
+				3799EF3D2AC3AED00018AB87 /* Injected.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		3799EF3F2AC3AF0F0018AB87 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		37C5A1BF2ABB7185005280B5 = {
@@ -108,6 +146,7 @@
 		37C5A1CA2ABB7185005280B5 /* NutritionNest */ = {
 			isa = PBXGroup;
 			children = (
+				3799EF372AC3AE050018AB87 /* Common */,
 				3799EF322AC3AA810018AB87 /* Models */,
 				3799EF2E2AC3A87C0018AB87 /* Services */,
 				3799EF2D2AC3A8530018AB87 /* Supporting Files */,
@@ -228,6 +267,7 @@
 			files = (
 				377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */,
 				374BB0862ABE5E350010C707 /* Localizable.strings in Resources */,
+				3799EF362AC3AC030018AB87 /* GoogleService-Info.plist in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
 			);
@@ -245,8 +285,12 @@
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
 				3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */,
+				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
+				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
+				3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */,
 				3799EF342AC3AAA80018AB87 /* User.swift in Sources */,
+				3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
