@@ -18,6 +18,9 @@
 		3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3D2AC3AED00018AB87 /* Injected.swift */; };
 		3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */; };
 		3799EF492AC3B0470018AB87 /* NutritionNestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */; };
+		3799EF512AC3B2100018AB87 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3799EF502AC3B2100018AB87 /* FirebaseAnalytics */; };
+		3799EF552AC3B2100018AB87 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3799EF542AC3B2100018AB87 /* FirebaseAuth */; };
+		3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF562AC3B2B10018AB87 /* AppDelegate.swift */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -49,6 +52,7 @@
 		3799EF402AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthenticationProvider.swift; sourceTree = "<group>"; };
 		3799EF462AC3B0470018AB87 /* NutritionNestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionNestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestTests.swift; sourceTree = "<group>"; };
+		3799EF562AC3B2B10018AB87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3799EF552AC3B2100018AB87 /* FirebaseAuth in Frameworks */,
+				3799EF512AC3B2100018AB87 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +189,7 @@
 				374BB0832ABE5DC10010C707 /* Constants */,
 				37C5A1DA2ABB7CB2005280B5 /* Views */,
 				37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */,
+				3799EF562AC3B2B10018AB87 /* AppDelegate.swift */,
 				37C5A1D12ABB7187005280B5 /* NutritionNest.entitlements */,
 				37C5A1D22ABB7187005280B5 /* Preview Content */,
 			);
@@ -267,6 +274,8 @@
 			);
 			name = NutritionNest;
 			packageProductDependencies = (
+				3799EF502AC3B2100018AB87 /* FirebaseAnalytics */,
+				3799EF542AC3B2100018AB87 /* FirebaseAuth */,
 			);
 			productName = NutritionNest;
 			productReference = 37C5A1C82ABB7185005280B5 /* NutritionNest.app */;
@@ -302,6 +311,7 @@
 			mainGroup = 37C5A1BF2ABB7185005280B5;
 			packageReferences = (
 				371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 37C5A1C92ABB7185005280B5 /* Products */;
 			projectDirPath = "";
@@ -348,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */,
 				37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */,
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
@@ -583,6 +594,10 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-Xlinker",
+					"-no_warn_duplicate_libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc.NutritionNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -626,6 +641,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-no_warn_duplicate_libraries";
 				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc.NutritionNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -679,6 +695,14 @@
 				minimumVersion = 0.52.4;
 			};
 		};
+		3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.15.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -686,6 +710,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		3799EF502AC3B2100018AB87 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3799EF542AC3B2100018AB87 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

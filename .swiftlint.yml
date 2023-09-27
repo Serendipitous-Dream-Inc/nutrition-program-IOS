@@ -4,4 +4,4 @@ disabled_rules:
 nesting:
     type_level: 2
     
-line_length: 135
+line_length: 160
