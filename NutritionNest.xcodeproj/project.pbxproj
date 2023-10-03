@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18905E062AC4FABC00274E8D /* OnboardingView.swift */; };
 		3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433492ACB9394008F2703 /* AuthenticationTests.swift */; };
 		3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */; };
 		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
-		18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18905E062AC4FABC00274E8D /* OnboardingView.swift */; };
 		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
 		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
@@ -43,10 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18905E062AC4FABC00274E8D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		370433492ACB9394008F2703 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectedValues+Keys.swift"; sourceTree = "<group>"; };
 		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		18905E062AC4FABC00274E8D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -283,11 +283,11 @@
 				37C5A1C42ABB7185005280B5 /* Sources */,
 				37C5A1C52ABB7185005280B5 /* Frameworks */,
 				37C5A1C62ABB7185005280B5 /* Resources */,
+				370433512ACBA747008F2703 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				371E6A7E2ABB95CD009223D6 /* PBXTargetDependency */,
 			);
 			name = NutritionNest;
 			packageProductDependencies = (
@@ -327,7 +327,6 @@
 			);
 			mainGroup = 37C5A1BF2ABB7185005280B5;
 			packageReferences = (
-				371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 				3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 37C5A1C92ABB7185005280B5 /* Products */;
@@ -361,6 +360,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		370433512ACBA747008F2703 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3799EF422AC3B0470018AB87 /* Sources */ = {
@@ -396,10 +415,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		371E6A7E2ABB95CD009223D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */;
-		};
 		3799EF4B2AC3B0470018AB87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37C5A1C72ABB7185005280B5 /* NutritionNest */;
@@ -596,6 +611,7 @@
 				DEVELOPMENT_TEAM = L6B3W3NNQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NutritionNest;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -643,6 +659,7 @@
 				DEVELOPMENT_TEAM = L6B3W3NNQ3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = NutritionNest;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
@@ -707,14 +724,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.52.4;
-			};
-		};
 		3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -726,11 +735,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		371E6A7D2ABB95CD009223D6 /* SwiftLintPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 371E6A7A2ABB95BF009223D6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintPlugin";
-		};
 		3799EF502AC3B2100018AB87 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
