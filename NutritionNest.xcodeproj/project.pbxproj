@@ -13,6 +13,8 @@
 		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
 		370433542ACC658F008F2703 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370433532ACC658F008F2703 /* Colors.xcassets */; };
 		370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433552ACC6763008F2703 /* AssetColors+Constants.swift */; };
+		370433592ACC69ED008F2703 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370433582ACC69E8008F2703 /* Inter.ttf */; };
+		3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */; };
 		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
 		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
@@ -51,6 +53,9 @@
 		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		370433532ACC658F008F2703 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		370433552ACC6763008F2703 /* AssetColors+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetColors+Constants.swift"; sourceTree = "<group>"; };
+		370433582ACC69E8008F2703 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
+		3704335A2ACC6A61008F2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomFonts+Constants.swift"; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -101,11 +106,20 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		370433572ACC697E008F2703 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				370433582ACC69E8008F2703 /* Inter.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		374BB0832ABE5DC10010C707 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				374BB08B2ABE5E880010C707 /* Localization+Constants.swift */,
 				370433552ACC6763008F2703 /* AssetColors+Constants.swift */,
+				3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -113,6 +127,7 @@
 		3799EF2D2AC3A8530018AB87 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				370433572ACC697E008F2703 /* Fonts */,
 				3704334F2ACB9618008F2703 /* GoogleService-Info.plist */,
 				374BB0882ABE5E350010C707 /* Localizable.strings */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
@@ -204,6 +219,7 @@
 		37C5A1CA2ABB7185005280B5 /* NutritionNest */ = {
 			isa = PBXGroup;
 			children = (
+				3704335A2ACC6A61008F2703 /* Info.plist */,
 				3799EF372AC3AE050018AB87 /* Common */,
 				3799EF322AC3AA810018AB87 /* Models */,
 				3799EF2E2AC3A87C0018AB87 /* Services */,
@@ -358,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */,
+				370433592ACC69ED008F2703 /* Inter.ttf in Resources */,
 				374BB0862ABE5E350010C707 /* Localizable.strings in Resources */,
 				370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */,
 				370433542ACC658F008F2703 /* Colors.xcassets in Resources */,
@@ -405,6 +422,7 @@
 				3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */,
 				37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */,
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
+				3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
 				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
@@ -621,6 +639,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NutritionNest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NutritionNest;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -669,6 +688,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NutritionNest/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NutritionNest;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

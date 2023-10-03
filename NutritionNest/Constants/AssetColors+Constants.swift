@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AssetColors {
-    static let background = Color("BackgroundColor")
+    let background = Color("BackgroundColor")
 }
 
 extension Color {
