@@ -10,6 +10,7 @@
 		3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433492ACB9394008F2703 /* AuthenticationTests.swift */; };
 		3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */; };
 		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
+		18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18905E062AC4FABC00274E8D /* OnboardingView.swift */; };
 		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
 		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
@@ -45,6 +46,7 @@
 		370433492ACB9394008F2703 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectedValues+Keys.swift"; sourceTree = "<group>"; };
 		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18905E062AC4FABC00274E8D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18905E052AC4FAA700274E8D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				18905E062AC4FABC00274E8D /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		374BB0832ABE5DC10010C707 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +223,7 @@
 		37C5A1DA2ABB7CB2005280B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18905E052AC4FAA700274E8D /* Onboarding */,
 				37C5A1E22ABB7F38005280B5 /* LogInView */,
 				37C5A1DF2ABB7F1A005280B5 /* SignUpView */,
 				37C5A1DB2ABB7E51005280B5 /* ContentView */,
@@ -369,6 +380,7 @@
 				37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */,
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
+				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
 				3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */,
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
