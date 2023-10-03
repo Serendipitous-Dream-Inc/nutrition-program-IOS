@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433492ACB9394008F2703 /* AuthenticationTests.swift */; };
+		3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */; };
+		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
 		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
 		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
 		3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */; };
 		3799EF342AC3AAA80018AB87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF332AC3AAA80018AB87 /* User.swift */; };
-		3799EF362AC3AC030018AB87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3799EF352AC3AC030018AB87 /* GoogleService-Info.plist */; };
 		3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF392AC3AE710018AB87 /* InjectedValues.swift */; };
 		3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */; };
 		3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF3D2AC3AED00018AB87 /* Injected.swift */; };
@@ -40,12 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370433492ACB9394008F2703 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectedValues+Keys.swift"; sourceTree = "<group>"; };
+		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProviding.swift; sourceTree = "<group>"; };
 		3799EF332AC3AAA80018AB87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		3799EF352AC3AC030018AB87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3799EF392AC3AE710018AB87 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
 		3799EF3D2AC3AED00018AB87 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
@@ -91,14 +95,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		3799EF2D2AC3A8530018AB87 /* Supporting Files */ = {
+		3799EF2D2AC3A8530018AB87 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3799EF352AC3AC030018AB87 /* GoogleService-Info.plist */,
+				3704334F2ACB9618008F2703 /* GoogleService-Info.plist */,
 				374BB0882ABE5E350010C707 /* Localizable.strings */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
 			);
-			path = "Supporting Files";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3799EF2E2AC3A87C0018AB87 /* Services */ = {
@@ -140,6 +144,7 @@
 				3799EF392AC3AE710018AB87 /* InjectedValues.swift */,
 				3799EF3B2AC3AE930018AB87 /* InjectionKey.swift */,
 				3799EF3D2AC3AED00018AB87 /* Injected.swift */,
+				3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */,
+				370433492ACB9394008F2703 /* AuthenticationTests.swift */,
 			);
 			path = NutritionNestTests;
 			sourceTree = "<group>";
@@ -185,7 +191,7 @@
 				3799EF372AC3AE050018AB87 /* Common */,
 				3799EF322AC3AA810018AB87 /* Models */,
 				3799EF2E2AC3A87C0018AB87 /* Services */,
-				3799EF2D2AC3A8530018AB87 /* Supporting Files */,
+				3799EF2D2AC3A8530018AB87 /* Resources */,
 				374BB0832ABE5DC10010C707 /* Constants */,
 				37C5A1DA2ABB7CB2005280B5 /* Views */,
 				37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */,
@@ -337,7 +343,7 @@
 			files = (
 				377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */,
 				374BB0862ABE5E350010C707 /* Localizable.strings in Resources */,
-				3799EF362AC3AC030018AB87 /* GoogleService-Info.plist in Resources */,
+				370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
 			);
@@ -351,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3799EF492AC3B0470018AB87 /* NutritionNestTests.swift in Sources */,
+				3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +374,7 @@
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
+				3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */,
 				3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */,
 				3799EF342AC3AAA80018AB87 /* User.swift in Sources */,
 				3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */,

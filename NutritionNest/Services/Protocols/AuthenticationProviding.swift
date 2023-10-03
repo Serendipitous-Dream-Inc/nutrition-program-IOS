@@ -8,7 +8,7 @@
 import Foundation
 
 enum AuthenticationError: Error {
-    case signInFailed
+    case signInFailed(_ reason: String)
     case registerFailed
     case emailNotVerified
     case emailAlreadyInUse
