@@ -11,6 +11,8 @@
 		3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433492ACB9394008F2703 /* AuthenticationTests.swift */; };
 		3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */; };
 		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
+		370433542ACC658F008F2703 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370433532ACC658F008F2703 /* Colors.xcassets */; };
+		370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433552ACC6763008F2703 /* AssetColors+Constants.swift */; };
 		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
 		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
@@ -47,6 +49,8 @@
 		370433492ACB9394008F2703 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectedValues+Keys.swift"; sourceTree = "<group>"; };
 		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		370433532ACC658F008F2703 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		370433552ACC6763008F2703 /* AssetColors+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetColors+Constants.swift"; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				374BB08B2ABE5E880010C707 /* Localization+Constants.swift */,
+				370433552ACC6763008F2703 /* AssetColors+Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 				3704334F2ACB9618008F2703 /* GoogleService-Info.plist */,
 				374BB0882ABE5E350010C707 /* Localizable.strings */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
+				370433532ACC658F008F2703 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */,
 				374BB0862ABE5E350010C707 /* Localizable.strings in Resources */,
 				370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */,
+				370433542ACC658F008F2703 /* Colors.xcassets in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
 			);
@@ -409,6 +416,7 @@
 				3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */,
 				3799EF342AC3AAA80018AB87 /* User.swift in Sources */,
 				3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */,
+				370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
