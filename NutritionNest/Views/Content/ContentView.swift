@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @Injected(\.authenticationProvider) var authenticationProvider
-    
     var body: some View {
         VStack {
             Image(systemName: "globe")

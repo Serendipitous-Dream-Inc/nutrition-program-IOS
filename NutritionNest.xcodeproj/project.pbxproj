@@ -246,35 +246,35 @@
 			isa = PBXGroup;
 			children = (
 				18905E052AC4FAA700274E8D /* Onboarding */,
-				37C5A1E22ABB7F38005280B5 /* LogInView */,
-				37C5A1DF2ABB7F1A005280B5 /* SignUpView */,
-				37C5A1DB2ABB7E51005280B5 /* ContentView */,
+				37C5A1E22ABB7F38005280B5 /* LogIn */,
+				37C5A1DF2ABB7F1A005280B5 /* SignUp */,
+				37C5A1DB2ABB7E51005280B5 /* Content */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		37C5A1DB2ABB7E51005280B5 /* ContentView */ = {
+		37C5A1DB2ABB7E51005280B5 /* Content */ = {
 			isa = PBXGroup;
 			children = (
 				37C5A1CD2ABB7185005280B5 /* ContentView.swift */,
 			);
-			path = ContentView;
+			path = Content;
 			sourceTree = "<group>";
 		};
-		37C5A1DF2ABB7F1A005280B5 /* SignUpView */ = {
+		37C5A1DF2ABB7F1A005280B5 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				37C5A1E02ABB7F32005280B5 /* SignUpView.swift */,
 			);
-			path = SignUpView;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
-		37C5A1E22ABB7F38005280B5 /* LogInView */ = {
+		37C5A1E22ABB7F38005280B5 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
 				37C5A1E32ABB7F5B005280B5 /* LogInView.swift */,
 			);
-			path = LogInView;
+			path = LogIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
