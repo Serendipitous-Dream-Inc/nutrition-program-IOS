@@ -12,5 +12,5 @@ struct AssetColors {
 }
 
 extension Color {
-    static let assetColors = AssetColors()
+    static let asset = AssetColors()
 }

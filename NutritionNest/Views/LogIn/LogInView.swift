@@ -10,7 +10,7 @@ import SwiftUI
 struct LogInView: View {
     var body: some View {
         ZStack {
-            Color.assetColors.background
+            Color.asset.background
                 .ignoresSafeArea()
             VStack(spacing: 0) {
                 Text("NutritionNest")
