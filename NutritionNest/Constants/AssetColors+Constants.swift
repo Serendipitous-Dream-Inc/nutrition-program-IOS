@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AssetColors {
     let background = Color("BackgroundColor")
+    let gray = Color("GrayColor")
+    let gray2 = Color("Gray2Color")
 }
 
 extension Color {

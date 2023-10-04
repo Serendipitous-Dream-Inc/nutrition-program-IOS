@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18905E062AC4FABC00274E8D /* OnboardingView.swift */; };
+		370248652ACDE75000B01429 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248642ACDE75000B01429 /* LogInViewModel.swift */; };
+		3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */; };
+		370248712ACDF63300B01429 /* PrimaryTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */; };
+		370248732ACDF65B00B01429 /* SecureField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248722ACDF65B00B01429 /* SecureField+Extensions.swift */; };
 		3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433492ACB9394008F2703 /* AuthenticationTests.swift */; };
 		3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */; };
 		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
@@ -48,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		18905E062AC4FABC00274E8D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		370248642ACDE75000B01429 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrimaryTextFieldModifier.swift; path = NutritionNest/Extensions/PrimaryTextFieldModifier.swift; sourceTree = SOURCE_ROOT; };
+		370248722ACDF65B00B01429 /* SecureField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecureField+Extensions.swift"; sourceTree = "<group>"; };
 		370433492ACB9394008F2703 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectedValues+Keys.swift"; sourceTree = "<group>"; };
 		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -104,6 +112,31 @@
 				18905E062AC4FABC00274E8D /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3702486A2ACDF48800B01429 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */,
+				370248722ACDF65B00B01429 /* SecureField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3702486E2ACDF61D00B01429 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3702486F2ACDF62500B01429 /* Modifiers */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3702486F2ACDF62500B01429 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		370433572ACC697E008F2703 /* Fonts */ = {
@@ -225,6 +258,8 @@
 				3799EF2E2AC3A87C0018AB87 /* Services */,
 				3799EF2D2AC3A8530018AB87 /* Resources */,
 				374BB0832ABE5DC10010C707 /* Constants */,
+				3702486A2ACDF48800B01429 /* Extensions */,
+				3702486E2ACDF61D00B01429 /* Components */,
 				37C5A1DA2ABB7CB2005280B5 /* Views */,
 				37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */,
 				3799EF562AC3B2B10018AB87 /* AppDelegate.swift */,
@@ -273,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				37C5A1E32ABB7F5B005280B5 /* LogInView.swift */,
+				370248642ACDE75000B01429 /* LogInViewModel.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -388,6 +424,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		370433512ACBA747008F2703 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -424,17 +461,21 @@
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
+				3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */,
 				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
 				3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */,
+				370248712ACDF63300B01429 /* PrimaryTextFieldModifier.swift in Sources */,
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
+				370248732ACDF65B00B01429 /* SecureField+Extensions.swift in Sources */,
 				3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */,
 				3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */,
 				3799EF342AC3AAA80018AB87 /* User.swift in Sources */,
 				3799EF412AC3AF240018AB87 /* FirebaseAuthenticationProvider.swift in Sources */,
 				370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */,
+				370248652ACDE75000B01429 /* LogInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
