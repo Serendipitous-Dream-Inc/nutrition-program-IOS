@@ -12,6 +12,8 @@
 		3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */; };
 		370248712ACDF63300B01429 /* PrimaryTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */; };
 		370248732ACDF65B00B01429 /* SecureField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248722ACDF65B00B01429 /* SecureField+Extensions.swift */; };
+		370248752ACDFAA000B01429 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248742ACDFAA000B01429 /* SignUpViewModel.swift */; };
+		370248772ACDFB9D00B01429 /* SmallRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248762ACDFB9D00B01429 /* SmallRoundButton.swift */; };
 		3704334A2ACB9394008F2703 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433492ACB9394008F2703 /* AuthenticationTests.swift */; };
 		3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */; };
 		370433502ACB9618008F2703 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3704334F2ACB9618008F2703 /* GoogleService-Info.plist */; };
@@ -56,6 +58,8 @@
 		3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrimaryTextFieldModifier.swift; path = NutritionNest/Extensions/PrimaryTextFieldModifier.swift; sourceTree = SOURCE_ROOT; };
 		370248722ACDF65B00B01429 /* SecureField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecureField+Extensions.swift"; sourceTree = "<group>"; };
+		370248742ACDFAA000B01429 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		370248762ACDFB9D00B01429 /* SmallRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundButton.swift; sourceTree = "<group>"; };
 		370433492ACB9394008F2703 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
 		3704334B2ACB9415008F2703 /* InjectedValues+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectedValues+Keys.swift"; sourceTree = "<group>"; };
 		3704334F2ACB9618008F2703 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				3702486F2ACDF62500B01429 /* Modifiers */,
+				370248762ACDFB9D00B01429 /* SmallRoundButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				37C5A1E02ABB7F32005280B5 /* SignUpView.swift */,
+				370248742ACDFAA000B01429 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
+				370248772ACDFB9D00B01429 /* SmallRoundButton.swift in Sources */,
 				3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */,
 				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* LogInView.swift in Sources */,
@@ -469,6 +476,7 @@
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
+				370248752ACDFAA000B01429 /* SignUpViewModel.swift in Sources */,
 				370248732ACDF65B00B01429 /* SecureField+Extensions.swift in Sources */,
 				3704334C2ACB9415008F2703 /* InjectedValues+Keys.swift in Sources */,
 				3799EF3C2AC3AE930018AB87 /* InjectionKey.swift in Sources */,

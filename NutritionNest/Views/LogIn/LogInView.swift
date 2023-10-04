@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LogInView: View {
     
-    @StateObject var viewModel = LogInViewModel()
+    @StateObject private var viewModel = LogInViewModel()
     
     var body: some View {
         ZStack {
@@ -32,17 +32,8 @@ struct LogInView: View {
                 SecureField("", text: $viewModel.password, prompt: Text("Password"))
                     .primaryTextFieldStyle()
                     .padding(.top, 16)
-                Button {
+                SmallRoundButton(title: "Log In") {
                     
-                } label: {
-                    Text("Log In")
-                        .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
-                        .foregroundColor(.white)
-                        .bold()
-                        .padding(.vertical, 11)
-                        .padding(.horizontal, 58)
-                        .background(Color.accentColor)
-                        .cornerRadius(23)
                 }
                 .padding(.top, 22)
             }
