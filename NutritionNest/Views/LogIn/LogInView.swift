@@ -36,6 +36,20 @@ struct LogInView: View {
                     
                 }
                 .padding(.top, 22)
+                OrText()
+                .padding(.top, 32)
+                HStack(spacing: 9) {
+                    ProviderButton(image: .asset.facebookLogo) {
+                        
+                    }
+                    ProviderButton(image: .asset.googleLogo) {
+                        
+                    }
+                    ProviderButton(image: .asset.appleLogo) {
+                        
+                    }
+                }
+                .padding(.top, 22)
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.horizontal, 35)
