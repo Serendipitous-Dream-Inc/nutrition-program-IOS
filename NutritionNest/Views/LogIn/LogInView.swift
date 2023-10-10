@@ -39,13 +39,13 @@ struct LogInView: View {
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {
-                    ProviderButton(image: .asset.facebookLogo) {
+                    ProviderButton(image: .asset.logos.facebookLogo) {
                         
                     }
-                    ProviderButton(image: .asset.googleLogo) {
+                    ProviderButton(image: .asset.logos.googleLogo) {
                         
                     }
-                    ProviderButton(image: .asset.appleLogo) {
+                    ProviderButton(image: .asset.logos.appleLogo) {
                         
                     }
                 }

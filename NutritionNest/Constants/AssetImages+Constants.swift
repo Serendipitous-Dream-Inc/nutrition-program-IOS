@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct AssetImages {
-    let appleLogo = Image("AppleLogo")
-    let facebookLogo = Image("FacebookLogo")
-    let googleLogo = Image("GoogleLogo")
+    struct Logos {
+        let appleLogo = Image("AppleLogo")
+        let facebookLogo = Image("FacebookLogo")
+        let googleLogo = Image("GoogleLogo")
+        let appLogo = Image("AppLogo")
+    }
+    let logos = Logos()
 }
 
 extension Image {
