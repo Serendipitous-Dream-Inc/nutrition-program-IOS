@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 class SignUpViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
@@ -29,6 +30,8 @@ class SignUpViewModel: ObservableObject {
                     showErrorMessage(with: "Email already in use")
                 case .invalidEmail:
                     showErrorMessage(with: "Invalid email format")
+                case .weakPassword:
+                    showErrorMessage(with: "The password must be 6 characters long or more")
                 }
             }
         }

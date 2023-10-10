@@ -14,12 +14,14 @@ enum SignInError: Error {
     case needsToCompleteRegistration
 }
 
-enum SignUpError: Error {
+enum SignUpError: Error, LocalizedError {
     case signUpFailed(_ reason: String)
     /// Indicates that the email already exists.
     case emailAlreadyInUse
     /// Indicates the email address is malformed.
     case invalidEmail
+    /// The password must be 6 characters long or more.
+    case weakPassword
 }
 
 protocol AuthenticationProviding {

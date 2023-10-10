@@ -49,6 +49,8 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
                 throw SignUpError.invalidEmail
             case .emailAlreadyInUse:
                 throw SignUpError.emailAlreadyInUse
+            case .weakPassword:
+                throw SignUpError.weakPassword
             default: throw SignUpError.signUpFailed(String(describing: error))
             }
         }

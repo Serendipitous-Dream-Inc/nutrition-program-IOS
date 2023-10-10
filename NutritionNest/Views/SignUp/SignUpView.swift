@@ -29,6 +29,7 @@ struct SignUpView: View {
                 TextField("", text: $viewModel.email, prompt: Text("Email"))
                     .primaryTextFieldStyle()
                     .textContentType(.emailAddress)
+                    .textInputAutocapitalization(.never)
                     .padding(.top, 47)
                 SecureField("", text: $viewModel.password, prompt: Text("Password"))
                     .primaryTextFieldStyle()
