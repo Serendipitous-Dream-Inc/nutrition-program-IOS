@@ -26,12 +26,8 @@ class SignUpViewModel: ObservableObject {
                 switch error {
                 case .signUpFailed(let reason):
                     print("Sign up failed, reason: \(reason)")
-                case .emailAlreadyInUse:
-                    showErrorMessage(with: "Email already in use")
-                case .invalidEmail:
-                    showErrorMessage(with: "Invalid email format")
-                case .weakPassword:
-                    showErrorMessage(with: "The password must be 6 characters long or more")
+                default:
+                    showErrorMessage(with: error.localizedDescription)
                 }
             }
         }
@@ -39,11 +35,11 @@ class SignUpViewModel: ObservableObject {
     
     func validateFields() -> Bool {
         guard !email.isEmpty else {
-            showErrorMessage(with: "Email can't be nil")
+            showErrorMessage(with: Localization.SignUp.Error.emailEmpty)
             return false
         }
         guard !password.isEmpty else {
-            showErrorMessage(with: "Password can't be nil")
+            showErrorMessage(with: Localization.SignUp.Error.passwordEmpty)
             return false
         }
         return true

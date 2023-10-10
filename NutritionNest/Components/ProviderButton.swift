@@ -17,8 +17,8 @@ struct ProviderButton: View {
             image
                 .frame(height: 46)
                 .frame(maxWidth: .infinity)
-                .cornerRadius(8)
                 .background()
+                .cornerRadius(8)
                 .overlay {
                     RoundedRectangle(cornerRadius: 8)
                         .inset(by: 0.5)

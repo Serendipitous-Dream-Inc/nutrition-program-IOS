@@ -22,6 +22,19 @@ enum SignUpError: Error, LocalizedError {
     case invalidEmail
     /// The password must be 6 characters long or more.
     case weakPassword
+    
+    var errorDescription: String? {
+        switch self {
+        case .signUpFailed(let reason):
+            return "Sign up failed, reason: \(reason)"
+        case .emailAlreadyInUse:
+            return Localization.SignUp.Error.emailAlreadyInUse
+        case .invalidEmail:
+            return Localization.SignUp.Error.invalidEmail
+        case .weakPassword:
+            return Localization.SignUp.Error.weakPassword
+        }
+    }
 }
 
 protocol AuthenticationProviding {

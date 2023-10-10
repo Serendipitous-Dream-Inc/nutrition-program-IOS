@@ -16,22 +16,22 @@ struct SignUpView: View {
             Color.asset.background
                 .ignoresSafeArea()
             VStack(spacing: 0) {
-                Text("NutritionNest")
+                Text(Localization.SignUp.title)
                     .font(.custom.inter.font(size: 25, relativeTo: .title))
                     .bold()
                     .padding(.top, 32)
-                Text("Our AI friend is excited to assist you on your health journey!")
+                Text(Localization.SignUp.message)
                     .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
                     .foregroundColor(.asset.gray)
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
                     .padding(.horizontal, 30)
-                TextField("", text: $viewModel.email, prompt: Text("Email"))
+                TextField("", text: $viewModel.email, prompt: Text(Localization.SignUp.Prompt.email))
                     .primaryTextFieldStyle()
                     .textContentType(.emailAddress)
                     .textInputAutocapitalization(.never)
                     .padding(.top, 47)
-                SecureField("", text: $viewModel.password, prompt: Text("Password"))
+                SecureField("", text: $viewModel.password, prompt: Text(Localization.SignUp.Prompt.password))
                     .primaryTextFieldStyle()
                     .padding(.top, 16)
                 Text(viewModel.errorMessage)
@@ -40,7 +40,7 @@ struct SignUpView: View {
                     .foregroundColor(.red)
                     .frame(height: 13)
                     .padding(.top, 10)
-                SmallRoundButton(title: "Sign Up") {
+                SmallRoundButton(title: Localization.SignUp.Button.signUp) {
                     viewModel.singUp()
                 }
                 .padding(.top, 10)
