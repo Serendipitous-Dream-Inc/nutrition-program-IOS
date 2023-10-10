@@ -28,14 +28,21 @@ struct SignUpView: View {
                     .padding(.horizontal, 30)
                 TextField("", text: $viewModel.email, prompt: Text("Email"))
                     .primaryTextFieldStyle()
+                    .textContentType(.emailAddress)
                     .padding(.top, 47)
                 SecureField("", text: $viewModel.password, prompt: Text("Password"))
                     .primaryTextFieldStyle()
                     .padding(.top, 16)
+                Text(viewModel.errorMessage)
+                    .font(.custom.inter.font(size: 13, relativeTo: .footnote))
+                    .opacity(viewModel.showErrorMessage ? 1 : 0)
+                    .foregroundColor(.red)
+                    .frame(height: 13)
+                    .padding(.top, 10)
                 SmallRoundButton(title: "Sign Up") {
-                    
+                    viewModel.singUp()
                 }
-                .padding(.top, 22)
+                .padding(.top, 10)
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {

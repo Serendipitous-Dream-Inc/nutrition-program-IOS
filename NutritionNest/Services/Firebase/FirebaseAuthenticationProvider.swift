@@ -10,6 +10,13 @@ import FirebaseAuth
 struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
     let auth = Auth.auth()
+    @Injected(\.emailProvider) var emailProvider
+    
+    var user: User? {
+        guard let firebaseUser = auth.currentUser else { return nil }
+        guard let email = firebaseUser.email else { preconditionFailure("User email can't be nil") }
+        return User(id: firebaseUser.uid, email: email, isEmailVerified: firebaseUser.isEmailVerified)
+    }
     
     func signOut() {
         do {
@@ -33,7 +40,8 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
     func signUp(email: String, password: String) async throws {
         do {
             try await auth.createUser(withEmail: email, password: password)
-            // TODO: Send email verification.
+            guard let user else { throw SignUpError.signUpFailed("User can't be nil") }
+            emailProvider.sendEmailConfirmation(to: user)
         } catch let error as NSError {
             let authError = AuthErrorCode(_nsError: error)
             switch authError.code {

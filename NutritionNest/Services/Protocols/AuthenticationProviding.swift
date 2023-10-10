@@ -23,9 +23,11 @@ enum SignUpError: Error {
 }
 
 protocol AuthenticationProviding {
-    /// Attemps to singOut of the users account
+    /// Current logged in user
+    var user: User? { get }
+    /// Attempts to singOut of the users account
     func signOut()
-    /// Attemps to SignIn into the users account using email and password
+    /// Attempts to SignIn into the users account using email and password
     ///
     /// - Parameters:
     ///     - email: the user’s email
@@ -34,7 +36,7 @@ protocol AuthenticationProviding {
     /// - Throws: SignInError.emailNotVerified.
     ///     SignUpError.signInFailed(reason).
     func signIn(email: String, password: String) async throws
-    /// Attemps to SingUp  into the users account using email and password
+    /// Attempts to SingUp  into the users account using email and password
     ///
     /// - Parameters:
     ///     - email: the user’s email
