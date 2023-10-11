@@ -32,8 +32,18 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
             guard result.user.isEmailVerified else {
                 throw SignInError.emailNotVerified
             }
-        } catch {
-            throw SignInError.signInFailed(String(describing: error))
+        } catch let error as NSError {
+            let authError = AuthErrorCode(_nsError: error)
+            switch authError.code {
+            case .invalidEmail:
+                throw SignInError.invalidEmail
+            case .wrongPassword:
+                throw SignInError.wrongPassword
+            case .userDisabled:
+                throw SignInError.userDisabled
+            default:
+                throw SignInError.signInFailed(String(describing: error))
+            }
         }
     }
     

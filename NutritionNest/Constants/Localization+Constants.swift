@@ -32,6 +32,26 @@ enum Localization {
             static let passwordEmpty = Localization.tr("SignUp.Error.PasswordEmpty", fallback: "Password can't be empty")
         }
     }
+    enum LogIn {
+        static let title = Localization.tr("LogIn.Title", fallback: "NutritionNest")
+        static let message = Localization.tr("LogIn.Message", fallback: "Our AI friend is excited to assist you on your health journey!")
+        enum Prompt {
+            static let email = Localization.tr("LogIn.Prompt.Email", fallback: "Email")
+            static let password = Localization.tr("LogIn.Prompt.Password", fallback: "Password")
+        }
+        enum Button {
+            static let logIn = Localization.tr("LogIn.Button.SignUp", fallback: "Log In")
+        }
+        enum Error {
+            static let emailNotVerified = Localization.tr("LogIn.Error.EmailNotVerified", fallback: "Email hasn't been verified!")
+            static let emailEmpty = Localization.tr("LogIn.Error.EmailEmpty", fallback: "Email field is empty")
+            static let passwordEmpty = Localization.tr("LogIn.Error.PasswordEmpty", fallback: "Password field is empty")
+            static let userDisabled = Localization.tr("LogIn.Error.UserDisabled", fallback: "This account has been disabled")
+            static let wrongPassword = Localization.tr("LogIn.Error.WrongPassword", fallback: "Incorrect password")
+            static let invalidEmail = Localization.tr("LogIn.Error.InvalidEmail", fallback: "Invalid email")
+            static let invalidCredentials = Localization.tr("LogIn.Error.InvalidCredentials", fallback: "Invalid email or password")
+        }
+    }
 }
 
 // MARK: Implementation

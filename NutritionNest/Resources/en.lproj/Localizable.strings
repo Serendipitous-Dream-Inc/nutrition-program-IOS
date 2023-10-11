@@ -23,3 +23,17 @@
 "SignUp.Error.WeakPassword" = "The password must be 6 characters long or more";
 "SignUp.Error.EmailEmpty" = "Email can't be empty";
 "SignUp.Error.PasswordEmpty" = "Password can't be empty";
+
+// LogIn
+"LogIn.Title" = "NutritionNest";
+"LogIn.Message" = "Our AI friend is excited to assist you on your health journey!";
+"LogIn.Prompt.Email" = "Email";
+"LogIn.Prompt.Password" = "Password";
+"LogIn.Button.LogIn" = "Log In";
+"LogIn.Error.EmailNotVerified" = "Email hasn't been verified!";
+"LogIn.Error.EmailEmpty" = "Email field is empty";
+"LogIn.Error.PasswordEmpty" = "Password field is empty";
+"LogIn.Error.UserDisabled" = "This account has been disabled";
+"LogIn.Error.WrongPassword" = "Incorrect password";
+"LogIn.Error.InvalidEmail" = "Invalid email format";
+"Login.Error.InvalidCredentials" = "Invalid email or password";

@@ -18,14 +18,15 @@ class SignUpViewModel: ObservableObject {
     
     func singUp() {
         guard validateFields() else { return }
+        showErrorMessage = false
         Task {
             do {
                 try await authenticationProvider.signUp(email: email, password: password)
                 showErrorMessage = false
             } catch let error as SignUpError {
                 switch error {
-                case .signUpFailed(let reason):
-                    print("Sign up failed, reason: \(reason)")
+                case .signUpFailed:
+                    print(error.localizedDescription)
                 default:
                     showErrorMessage(with: error.localizedDescription)
                 }

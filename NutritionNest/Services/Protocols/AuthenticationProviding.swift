@@ -7,11 +7,35 @@
 
 import Foundation
 
-enum SignInError: Error {
+enum SignInError: Error, LocalizedError {
     case signInFailed(_ reason: String)
+    /// Indicates that the email has not been verified yet by the user
     case emailNotVerified
-    /// Indicates that the user hasn't finished registration 
+    /// Indicates the user's account is disabled
+    case userDisabled
+    /// Indicates the user attempted sign in with an incorrect password.
+    case wrongPassword
+    /// Indicates the email address is malformed
+    case invalidEmail
+    /// Indicates that the user hasn't finished registration
     case needsToCompleteRegistration
+    
+    var errorDescription: String? {
+        switch self {
+        case .signInFailed(let reason):
+            return "Sing in failed, reason: \(reason)"
+        case .emailNotVerified:
+            return Localization.LogIn.Error.emailNotVerified
+        case .needsToCompleteRegistration:
+            return "Needs to complete registration"
+        case .userDisabled:
+            return Localization.LogIn.Error.userDisabled
+        case .wrongPassword:
+            return Localization.LogIn.Error.wrongPassword
+        case .invalidEmail:
+            return Localization.LogIn.Error.invalidEmail
+        }
+    }
 }
 
 enum SignUpError: Error, LocalizedError {
