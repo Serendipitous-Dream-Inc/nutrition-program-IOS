@@ -18,5 +18,5 @@ struct AssetImages {
 }
 
 extension Image {
-    static let asset = AssetImages()
+    static let assets = AssetImages()
 }

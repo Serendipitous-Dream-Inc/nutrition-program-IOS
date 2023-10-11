@@ -23,3 +23,11 @@
 "SignUp.Error.WeakPassword" = "The password must be 6 characters long or more";
 "SignUp.Error.EmailEmpty" = "Email can't be empty";
 "SignUp.Error.PasswordEmpty" = "Password can't be empty";
+
+// LogIn
+"LogIn.Title" = "NutritionNest";
+"LogIn.Message" = "Our AI friend is excited to assist you on your health journey!";
+"LogIn.Prompt.Email" = "Email";
+"LogIn.Prompt.Password" = "Password";
+"LogIn.Button.LogIn" = "Log In";
+"LogIn.Error.EmailNotVerified" = "Email hasn't been verified!";

@@ -47,13 +47,13 @@ struct SignUpView: View {
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {
-                    ProviderButton(image: .asset.logos.facebookLogo) {
+                    ProviderButton(image: .assets.logos.facebookLogo) {
                         
                     }
-                    ProviderButton(image: .asset.logos.googleLogo) {
+                    ProviderButton(image: .assets.logos.googleLogo) {
                         
                     }
-                    ProviderButton(image: .asset.logos.appleLogo) {
+                    ProviderButton(image: .assets.logos.appleLogo) {
                         
                     }
                 }
