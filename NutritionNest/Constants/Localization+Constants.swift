@@ -44,6 +44,12 @@ enum Localization {
         }
         enum Error {
             static let emailNotVerified = Localization.tr("LogIn.Error.EmailNotVerified", fallback: "Email hasn't been verified!")
+            static let emailEmpty = Localization.tr("LogIn.Error.EmailEmpty", fallback: "Email field is empty")
+            static let passwordEmpty = Localization.tr("LogIn.Error.PasswordEmpty", fallback: "Password field is empty")
+            static let userDisabled = Localization.tr("LogIn.Error.UserDisabled", fallback: "This account has been disabled")
+            static let wrongPassword = Localization.tr("LogIn.Error.WrongPassword", fallback: "Incorrect password")
+            static let invalidEmail = Localization.tr("LogIn.Error.InvalidEmail", fallback: "Invalid email")
+            static let invalidCredentials = Localization.tr("LogIn.Error.InvalidCredentials", fallback: "Invalid email or password")
         }
     }
 }

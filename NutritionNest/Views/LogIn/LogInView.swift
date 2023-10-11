@@ -28,14 +28,22 @@ struct LogInView: View {
                     .padding(.horizontal, 30)
                 TextField("", text: $viewModel.email, prompt: Text(Localization.LogIn.Prompt.email))
                     .primaryTextFieldStyle()
+                    .textContentType(.emailAddress)
+                    .textInputAutocapitalization(.never)
                     .padding(.top, 47)
                 SecureField("", text: $viewModel.password, prompt: Text(Localization.LogIn.Prompt.password))
                     .primaryTextFieldStyle()
                     .padding(.top, 16)
+                Text(viewModel.errorMessage)
+                    .font(.custom.inter.font(size: 13, relativeTo: .footnote))
+                    .opacity(viewModel.showErrorMessage ? 1 : 0)
+                    .foregroundColor(.red)
+                    .frame(height: 13)
+                    .padding(.top, 10)
                 SmallRoundButton(title: Localization.LogIn.Button.logIn) {
-                    
+                    viewModel.logIn()
                 }
-                .padding(.top, 22)
+                .padding(.top, 10)
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {

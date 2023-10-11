@@ -7,7 +7,48 @@
 
 import SwiftUI
 
+@MainActor
 class LogInViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var errorMessage: String = ""
+    @Published var showErrorMessage: Bool = false
+    
+    @Injected(\.authenticationProvider) private var authenticationProvider
+    
+    func logIn() {
+        guard validateFields() else { return }
+        showErrorMessage = false
+        Task {
+            do {
+                try await authenticationProvider.signIn(email: email, password: password)
+                showErrorMessage = false
+                print("Log in Success")
+            } catch let error as SignInError {
+                switch error {
+                case .signInFailed:
+                    showErrorMessage(with: Localization.LogIn.Error.invalidCredentials)
+                default:
+                    showErrorMessage(with: error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    func validateFields() -> Bool {
+        guard !email.isEmpty else {
+            showErrorMessage(with: Localization.SignUp.Error.emailEmpty)
+            return false
+        }
+        guard !password.isEmpty else {
+            showErrorMessage(with: Localization.SignUp.Error.passwordEmpty)
+            return false
+        }
+        return true
+    }
+    
+    func showErrorMessage(with message: String) {
+        errorMessage = message
+        showErrorMessage = true
+    }
 }

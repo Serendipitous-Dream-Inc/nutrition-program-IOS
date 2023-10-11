@@ -31,3 +31,9 @@
 "LogIn.Prompt.Password" = "Password";
 "LogIn.Button.LogIn" = "Log In";
 "LogIn.Error.EmailNotVerified" = "Email hasn't been verified!";
+"LogIn.Error.EmailEmpty" = "Email field is empty";
+"LogIn.Error.PasswordEmpty" = "Password field is empty";
+"LogIn.Error.UserDisabled" = "This account has been disabled";
+"LogIn.Error.WrongPassword" = "Incorrect password";
+"LogIn.Error.InvalidEmail" = "Invalid email format";
+"Login.Error.InvalidCredentials" = "Invalid email or password";
