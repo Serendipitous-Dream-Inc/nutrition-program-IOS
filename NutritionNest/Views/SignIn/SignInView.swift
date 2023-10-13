@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct SignInView: View {
     
@@ -53,7 +54,9 @@ struct SignInView: View {
                     ProviderButton(image: .assets.logos.googleLogo) {
                         viewModel.logInGoogle()
                     }
-                    ProviderButton(image: .assets.logos.appleLogo) {
+                    ProviderAppleButton { request in
+                        request.requestedScopes = [.fullName, .email]
+                    } onCompletion: { _ in
                         
                     }
                 }
