@@ -1,5 +1,5 @@
 //
-//  LogInViewModel.swift
+//  SignInViewModel.swift
 //  NutritionNest
 //
 //  Created by Pedro Ésli Vieira do Nascimento on 04/10/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @MainActor
-class LogInViewModel: ObservableObject {
+class SignInViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var errorMessage: String = ""
@@ -31,6 +31,20 @@ class LogInViewModel: ObservableObject {
                 default:
                     showErrorMessage(with: error.localizedDescription)
                 }
+            }
+        }
+    }
+    
+    func logInGoogle() {
+        Task {
+            guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {
+                 return
+            }
+            do {
+                try await authenticationProvider.signInGoogle(withPresenting: presentingViewController)
+                print("Log in Google Success")
+            } catch {
+                print(error)
             }
         }
     }

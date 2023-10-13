@@ -5,7 +5,10 @@
 //  Created by Pedro Ésli Vieira do Nascimento on 26/09/23.
 //
 
+import FirebaseCore
 import FirebaseAuth
+import GoogleSignIn
+import UIKit
 
 struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
@@ -44,6 +47,27 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
             default:
                 throw SignInError.signInFailed(String(describing: error))
             }
+        }
+    }
+    
+    @MainActor
+    func signInGoogle(withPresenting presentingViewController: UIViewController) async throws {
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            throw SignInError.signInFailed("Client ID returned nil")
+        }
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        do {
+            let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController)
+            let user = result.user
+            guard let idToken = user.idToken?.tokenString else {
+                throw SignInError.signInFailed("Failed to get user id token")
+            }
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            try await auth.signIn(with: credential)
+        } catch {
+            throw SignInError.signInFailed(String(describing: error))
         }
     }
     

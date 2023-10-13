@@ -1,5 +1,5 @@
 //
-//  LogInView.swift
+//  SignInView.swift
 //  NutritionNest
 //
 //  Created by Pedro Ésli Vieira do Nascimento on 20/09/23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct LogInView: View {
+struct SignInView: View {
     
-    @StateObject private var viewModel = LogInViewModel()
+    @StateObject private var viewModel = SignInViewModel()
     
     var body: some View {
         ZStack {
@@ -51,7 +51,7 @@ struct LogInView: View {
                         
                     }
                     ProviderButton(image: .assets.logos.googleLogo) {
-                        
+                        viewModel.logInGoogle()
                     }
                     ProviderButton(image: .assets.logos.appleLogo) {
                         
@@ -67,6 +67,6 @@ struct LogInView: View {
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView()
+        SignInView()
     }
 }
