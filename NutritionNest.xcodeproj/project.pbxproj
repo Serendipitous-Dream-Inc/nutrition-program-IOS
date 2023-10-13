@@ -20,7 +20,6 @@
 		370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433552ACC6763008F2703 /* AssetColors+Constants.swift */; };
 		370433592ACC69ED008F2703 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370433582ACC69E8008F2703 /* Inter.ttf */; };
 		3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */; };
-		372077392AD8CE79008534FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 372077382AD8CE79008534FD /* GoogleService-Info.plist */; };
 		3720773D2AD8D35D008534FD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3720773C2AD8D35D008534FD /* GoogleSignIn */; };
 		372077422AD9E24E008534FD /* ProviderAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372077412AD9E24E008534FD /* ProviderAppleButton.swift */; };
 		372077442AD9EF36008534FD /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372077432AD9EF36008534FD /* CryptoHelper.swift */; };
@@ -39,6 +38,7 @@
 		3799EF512AC3B2100018AB87 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3799EF502AC3B2100018AB87 /* FirebaseAnalytics */; };
 		3799EF552AC3B2100018AB87 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3799EF542AC3B2100018AB87 /* FirebaseAuth */; };
 		3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF562AC3B2B10018AB87 /* AppDelegate.swift */; };
+		37B0AAC72ADA0CBE005B4B9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -75,7 +75,6 @@
 		370433582ACC69E8008F2703 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		3704335A2ACC6A61008F2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomFonts+Constants.swift"; sourceTree = "<group>"; };
-		372077382AD8CE79008534FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		372077412AD9E24E008534FD /* ProviderAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderAppleButton.swift; sourceTree = "<group>"; };
 		372077432AD9EF36008534FD /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		3799EF462AC3B0470018AB87 /* NutritionNestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionNestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestTests.swift; sourceTree = "<group>"; };
 		3799EF562AC3B2B10018AB87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 			children = (
 				370433572ACC697E008F2703 /* Fonts */,
 				374BB0882ABE5E350010C707 /* Localizable.strings */,
-				372077382AD8CE79008534FD /* GoogleService-Info.plist */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
+				37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */,
 				370433532ACC658F008F2703 /* Colors.xcassets */,
 			);
 			path = Resources;
@@ -462,7 +462,7 @@
 				370433542ACC658F008F2703 /* Colors.xcassets in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
-				372077392AD8CE79008534FD /* GoogleService-Info.plist in Resources */,
+				37B0AAC72ADA0CBE005B4B9D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

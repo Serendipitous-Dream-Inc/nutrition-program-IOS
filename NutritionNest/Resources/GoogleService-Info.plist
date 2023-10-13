@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>565517272-he9l7ksqeoganpkr4th38of8tj7iujhm.apps.googleusercontent.com</string>
+	<string>565517272-eno4vng3n5hg3qlhv94snjtbvhgbqvaf.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.565517272-he9l7ksqeoganpkr4th38of8tj7iujhm</string>
+	<string>com.googleusercontent.apps.565517272-eno4vng3n5hg3qlhv94snjtbvhgbqvaf</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCe4rohOFk-4jETCKsrizEYyG9P0ZFvBMU</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.serendipitous.dream.inc.NutritionNest</string>
+	<string>com.SerendipitousDreamInc.NutritionNest</string>
 	<key>PROJECT_ID</key>
 	<string>nutritionnest-22bd7</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:565517272:ios:eda4034b800c7cc00730ad</string>
+	<string>1:565517272:ios:79f2c1171ca403950730ad</string>
 </dict>
 </plist>
