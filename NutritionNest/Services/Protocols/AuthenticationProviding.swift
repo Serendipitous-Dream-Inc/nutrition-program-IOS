@@ -5,7 +5,7 @@
 //  Created by Pedro Ésli Vieira do Nascimento on 26/09/23.
 //
 
-import Foundation
+import UIKit
 
 enum SignInError: Error, LocalizedError {
     case signInFailed(_ reason: String)
@@ -64,8 +64,10 @@ enum SignUpError: Error, LocalizedError {
 protocol AuthenticationProviding {
     /// Current logged in user
     var user: User? { get }
+    
     /// Attempts to singOut of the users account
     func signOut()
+    
     /// Attempts to SignIn into the users account using email and password
     ///
     /// - Parameters:
@@ -75,6 +77,13 @@ protocol AuthenticationProviding {
     /// - Throws: SignInError.emailNotVerified.
     ///     SignUpError.signInFailed(reason).
     func signIn(email: String, password: String) async throws
+    
+    /// Attempts to SignIn into the users account using Google
+    ///
+    /// - Parameter withPresenting: The view controller used to present  the google SignIn view
+    /// - Throws: SignInError.signInFailed(reason)
+    func signInGoogle(withPresenting presentingViewController: UIViewController) async throws
+    
     /// Attempts to SingUp  into the users account using email and password
     ///
     /// - Parameters:

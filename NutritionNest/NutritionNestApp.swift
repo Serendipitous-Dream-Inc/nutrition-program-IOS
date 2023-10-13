@@ -14,7 +14,8 @@ struct NutritionNestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            LogInView()
         }
     }
 }

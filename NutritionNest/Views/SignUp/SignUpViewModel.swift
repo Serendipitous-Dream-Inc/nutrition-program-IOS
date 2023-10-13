@@ -34,6 +34,20 @@ class SignUpViewModel: ObservableObject {
         }
     }
     
+    func signUpGoogle() {
+        Task {
+            guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {
+                 return
+            }
+            do {
+                try await authenticationProvider.signInGoogle(withPresenting: presentingViewController)
+                print("Log in Google Success")
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     func validateFields() -> Bool {
         guard !email.isEmpty else {
             showErrorMessage(with: Localization.SignUp.Error.emailEmpty)

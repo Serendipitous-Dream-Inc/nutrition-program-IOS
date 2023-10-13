@@ -51,7 +51,7 @@ struct LogInView: View {
                         
                     }
                     ProviderButton(image: .assets.logos.googleLogo) {
-                        
+                        viewModel.logInGoogle()
                     }
                     ProviderButton(image: .assets.logos.appleLogo) {
                         
