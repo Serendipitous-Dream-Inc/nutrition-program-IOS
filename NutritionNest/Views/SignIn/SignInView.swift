@@ -42,7 +42,7 @@ struct SignInView: View {
                     .frame(height: 13)
                     .padding(.top, 10)
                 SmallRoundButton(title: Localization.LogIn.Button.logIn) {
-                    viewModel.logIn()
+                    viewModel.signIn()
                 }
                 .padding(.top, 10)
                 OrText()
@@ -52,12 +52,12 @@ struct SignInView: View {
                         
                     }
                     ProviderButton(image: .assets.logos.googleLogo) {
-                        viewModel.logInGoogle()
+                        viewModel.signInGoogle()
                     }
                     ProviderAppleButton { request in
-                        request.requestedScopes = [.fullName, .email]
-                    } onCompletion: { _ in
-                        
+                        viewModel.configureAppleSignInRequest(request: request)
+                    } onCompletion: { result in
+                        viewModel.signInApple(result: result)
                     }
                 }
                 .padding(.top, 22)

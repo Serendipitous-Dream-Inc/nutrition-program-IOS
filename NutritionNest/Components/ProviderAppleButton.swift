@@ -25,10 +25,8 @@ struct ProviderAppleButton: View {
     }
     
     func createRequest() {
-        let nonce = CryptoHelper.randomNonceString()
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
-        request.nonce = CryptoHelper.sha256(nonce)
         onRequest(request)
         self.request = request
     }
@@ -36,7 +34,7 @@ struct ProviderAppleButton: View {
 
 #Preview {
     ProviderAppleButton { request in
-        request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = [.email]
     } onCompletion: { _ in
         
     }
