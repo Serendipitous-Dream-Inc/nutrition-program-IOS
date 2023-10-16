@@ -72,8 +72,8 @@ protocol AuthenticationProviding {
     /// Attempts to SignIn into the users account using email and password
     ///
     /// - Parameters:
-    ///     - email: the user’s email
-    ///     - password: the user’s password
+    ///     - email: The user’s email.
+    ///     - password: The user’s password.
     ///
     /// - Throws: SignInError.emailNotVerified.
     ///     SignUpError.signInFailed(reason).
@@ -81,18 +81,22 @@ protocol AuthenticationProviding {
     
     /// Attempts to SignIn into the users account using Google
     ///
-    /// - Parameter withPresenting: The view controller used to present  the google SignIn view
+    /// - Parameter withPresenting: The view controller used to present  the google SignIn view.
     /// - Throws: SignInError.signInFailed(reason)
     func signInGoogle(withPresenting presentingViewController: UIViewController) async throws
     
     /// Attempts to SignIn into the users account using Apple
-    func signInApple(authorization: ASAuthorization, rawNonce: String?) async throws
+    ///
+    /// - Parameters:
+    ///     - authorization: The authorization result of Apple Sign.
+    ///     - rawNonce: The raw nonce associated with the Sign in with Apple Auth credential being created.
+    func signInApple(authorization: ASAuthorization, rawNonce: String) async throws
     
     /// Attempts to SingUp  into the users account using email and password
     ///
     /// - Parameters:
-    ///     - email: the user’s email
-    ///     - password: the user’s password
+    ///     - email: The user’s email.
+    ///     - password: The user’s password.
     ///
     /// - Throws: SignUpError.emailAlreadyInUse.
     ///     SignUpError.invalidEmail.

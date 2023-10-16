@@ -55,7 +55,10 @@ class SignUpViewModel: ObservableObject {
         case .success(let authorization):
             Task {
                 do {
-                    try await authenticationProvider.signInApple(authorization: authorization, rawNonce: currentNonce)
+                    guard let rawNonce = currentNonce else {
+                        fatalError("Invalid state: A login callback was received, but no login request was sent.")
+                    }
+                    try await authenticationProvider.signInApple(authorization: authorization, rawNonce: rawNonce)
                     print("Log in Apple Success")
                     currentNonce = nil
                 } catch {
