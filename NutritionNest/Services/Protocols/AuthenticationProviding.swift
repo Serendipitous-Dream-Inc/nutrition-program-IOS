@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 enum SignInError: Error, LocalizedError {
     case signInFailed(_ reason: String)
@@ -83,6 +84,9 @@ protocol AuthenticationProviding {
     /// - Parameter withPresenting: The view controller used to present  the google SignIn view
     /// - Throws: SignInError.signInFailed(reason)
     func signInGoogle(withPresenting presentingViewController: UIViewController) async throws
+    
+    /// Attempts to SignIn into the users account using Apple
+    func signInApple(authorization: ASAuthorization, rawNonce: String?) async throws
     
     /// Attempts to SingUp  into the users account using email and password
     ///

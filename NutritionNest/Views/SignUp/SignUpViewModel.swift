@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 @MainActor
 class SignUpViewModel: ObservableObject {
@@ -15,6 +16,7 @@ class SignUpViewModel: ObservableObject {
     @Published var showErrorMessage: Bool = false
     
     @Injected(\.authenticationProvider) private var authenticationProvider
+    private var currentNonce: String?
     
     func singUp() {
         guard validateFields() else { return }
@@ -48,7 +50,32 @@ class SignUpViewModel: ObservableObject {
         }
     }
     
-    func validateFields() -> Bool {
+    func signUpApple(result: Result<ASAuthorization, Error>) {
+        switch result {
+        case .success(let authorization):
+            Task {
+                do {
+                    try await authenticationProvider.signInApple(authorization: authorization, rawNonce: currentNonce)
+                    print("Log in Apple Success")
+                    currentNonce = nil
+                } catch {
+                    print(error)
+                }
+            }
+        case .failure(let error):
+            print(error)
+            currentNonce = nil
+        }
+    }
+    
+    func configureAppleSignUpRequest(request: ASAuthorizationAppleIDRequest) {
+        let nonce = CryptoHelper.randomNonceString()
+        currentNonce = nonce
+        request.nonce = CryptoHelper.sha256(nonce)
+        request.requestedScopes = [.email]
+    }
+    
+    private func validateFields() -> Bool {
         guard !email.isEmpty else {
             showErrorMessage(with: Localization.SignUp.Error.emailEmpty)
             return false
@@ -60,7 +87,7 @@ class SignUpViewModel: ObservableObject {
         return true
     }
     
-    func showErrorMessage(with message: String) {
+    private func showErrorMessage(with message: String) {
         errorMessage = message
         showErrorMessage = true
     }

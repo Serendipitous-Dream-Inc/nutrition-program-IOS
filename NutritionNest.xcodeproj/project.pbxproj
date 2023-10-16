@@ -20,8 +20,9 @@
 		370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370433552ACC6763008F2703 /* AssetColors+Constants.swift */; };
 		370433592ACC69ED008F2703 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370433582ACC69E8008F2703 /* Inter.ttf */; };
 		3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */; };
-		372077392AD8CE79008534FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 372077382AD8CE79008534FD /* GoogleService-Info.plist */; };
 		3720773D2AD8D35D008534FD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3720773C2AD8D35D008534FD /* GoogleSignIn */; };
+		372077422AD9E24E008534FD /* ProviderAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372077412AD9E24E008534FD /* ProviderAppleButton.swift */; };
+		372077442AD9EF36008534FD /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372077432AD9EF36008534FD /* CryptoHelper.swift */; };
 		374BB0862ABE5E350010C707 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 374BB0882ABE5E350010C707 /* Localizable.strings */; };
 		374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BB08B2ABE5E880010C707 /* Localization+Constants.swift */; };
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
@@ -37,6 +38,8 @@
 		3799EF512AC3B2100018AB87 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3799EF502AC3B2100018AB87 /* FirebaseAnalytics */; };
 		3799EF552AC3B2100018AB87 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3799EF542AC3B2100018AB87 /* FirebaseAuth */; };
 		3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF562AC3B2B10018AB87 /* AppDelegate.swift */; };
+		37A2D95A2ADAD3C10019DF8F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2D9592ADAD3C10019DF8F /* Log.swift */; };
+		37B0AAC72ADA0CBE005B4B9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -62,7 +65,7 @@
 		18905E062AC4FABC00274E8D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		370248642ACDE75000B01429 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
-		370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrimaryTextFieldModifier.swift; path = NutritionNest/Extensions/PrimaryTextFieldModifier.swift; sourceTree = SOURCE_ROOT; };
+		370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrimaryTextFieldModifier.swift; path = NutritionNest/Components/Modifiers/PrimaryTextFieldModifier.swift; sourceTree = SOURCE_ROOT; };
 		370248722ACDF65B00B01429 /* SecureField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecureField+Extensions.swift"; sourceTree = "<group>"; };
 		370248742ACDFAA000B01429 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		370248762ACDFB9D00B01429 /* SmallRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundButton.swift; sourceTree = "<group>"; };
@@ -73,7 +76,8 @@
 		370433582ACC69E8008F2703 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		3704335A2ACC6A61008F2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3704335B2ACC6BFC008F2703 /* CustomFonts+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomFonts+Constants.swift"; sourceTree = "<group>"; };
-		372077382AD8CE79008534FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		372077412AD9E24E008534FD /* ProviderAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderAppleButton.swift; sourceTree = "<group>"; };
+		372077432AD9EF36008534FD /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		374BB0872ABE5E350010C707 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		374BB08B2ABE5E880010C707 /* Localization+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localization+Constants.swift"; sourceTree = "<group>"; };
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		3799EF462AC3B0470018AB87 /* NutritionNestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionNestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3799EF482AC3B0470018AB87 /* NutritionNestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestTests.swift; sourceTree = "<group>"; };
 		3799EF562AC3B2B10018AB87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37A2D9592ADAD3C10019DF8F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,20 +148,13 @@
 		3702486E2ACDF61D00B01429 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				3702486F2ACDF62500B01429 /* Modifiers */,
+				372077402AD9E231008534FD /* Modifiers */,
 				370248762ACDFB9D00B01429 /* SmallRoundButton.swift */,
 				37F777FB2ACFA06A001C1CFA /* ProviderButton.swift */,
 				37F777FD2ACFA190001C1CFA /* OrText.swift */,
+				372077412AD9E24E008534FD /* ProviderAppleButton.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		3702486F2ACDF62500B01429 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */,
-			);
-			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		370433572ACC697E008F2703 /* Fonts */ = {
@@ -171,6 +170,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		372077402AD9E231008534FD /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				370248702ACDF63300B01429 /* PrimaryTextFieldModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		374BB0832ABE5DC10010C707 /* Constants */ = {
@@ -197,8 +204,8 @@
 			children = (
 				370433572ACC697E008F2703 /* Fonts */,
 				374BB0882ABE5E350010C707 /* Localizable.strings */,
-				372077382AD8CE79008534FD /* GoogleService-Info.plist */,
 				37C5A1CF2ABB7187005280B5 /* Assets.xcassets */,
+				37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */,
 				370433532ACC658F008F2703 /* Colors.xcassets */,
 			);
 			path = Resources;
@@ -235,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				3799EF382AC3AE1E0018AB87 /* DependencyInjection */,
+				372077432AD9EF36008534FD /* CryptoHelper.swift */,
+				37A2D9592ADAD3C10019DF8F /* Log.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -456,7 +465,7 @@
 				370433542ACC658F008F2703 /* Colors.xcassets in Resources */,
 				37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */,
 				37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */,
-				372077392AD8CE79008534FD /* GoogleService-Info.plist in Resources */,
+				37B0AAC72ADA0CBE005B4B9D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +508,7 @@
 			files = (
 				3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */,
 				37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */,
+				37A2D95A2ADAD3C10019DF8F /* Log.swift in Sources */,
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */,
 				37F777FE2ACFA190001C1CFA /* OrText.swift in Sources */,
@@ -506,10 +516,12 @@
 				370248772ACDFB9D00B01429 /* SmallRoundButton.swift in Sources */,
 				37F777FC2ACFA06A001C1CFA /* ProviderButton.swift in Sources */,
 				3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */,
+				372077442AD9EF36008534FD /* CryptoHelper.swift in Sources */,
 				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* SignInView.swift in Sources */,
 				3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */,
 				378EDCE42AD5C0DB001F5E5D /* EmailProvider.swift in Sources */,
+				372077422AD9E24E008534FD /* ProviderAppleButton.swift in Sources */,
 				370248712ACDF63300B01429 /* PrimaryTextFieldModifier.swift in Sources */,
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
@@ -556,14 +568,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				DEVELOPMENT_TEAM = SABRDAYZVW;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc..NutritionNestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipitousDreamInc.NutritionNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -582,14 +594,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				DEVELOPMENT_TEAM = SABRDAYZVW;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc..NutritionNestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipitousDreamInc.NutritionNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -723,7 +735,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"NutritionNest/Preview Content\"";
-				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				DEVELOPMENT_TEAM = SABRDAYZVW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -750,7 +762,7 @@
 					"-Xlinker",
 					"-no_warn_duplicate_libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc.NutritionNest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipitousDreamInc.NutritionNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -772,7 +784,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"NutritionNest/Preview Content\"";
-				DEVELOPMENT_TEAM = L6B3W3NNQ3;
+				DEVELOPMENT_TEAM = SABRDAYZVW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -796,7 +808,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				"OTHER_LDFLAGS[arch=*]" = "-no_warn_duplicate_libraries";
-				PRODUCT_BUNDLE_IDENTIFIER = com.serendipitous.dream.inc.NutritionNest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SerendipitousDreamInc.NutritionNest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

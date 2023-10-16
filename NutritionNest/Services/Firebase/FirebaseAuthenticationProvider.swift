@@ -9,6 +9,7 @@ import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
 import UIKit
+import AuthenticationServices
 
 struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
@@ -65,6 +66,29 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
                 throw SignInError.signInFailed("Failed to get user id token")
             }
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            try await auth.signIn(with: credential)
+        } catch {
+            throw SignInError.signInFailed(String(describing: error))
+        }
+    }
+    
+    func signInApple(authorization: ASAuthorization, rawNonce: String?) async throws {
+        guard let rawNonce else {
+            fatalError("Invalid state: A login callback was received, but no login request was sent.")
+        }
+        guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else {
+            throw SignInError.signInFailed("Could not get credentials")
+        }
+        guard let appleIDToken = appleIDCredential.identityToken else {
+            throw SignInError.signInFailed("Unable to fetch identity token")
+        }
+        guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+            throw SignInError.signInFailed("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+        }
+        
+        // Initialize a Firebase credential.
+        let credential = OAuthProvider.appleCredential(withIDToken: idTokenString, rawNonce: rawNonce, fullName: nil)
+        do {
             try await auth.signIn(with: credential)
         } catch {
             throw SignInError.signInFailed(String(describing: error))
