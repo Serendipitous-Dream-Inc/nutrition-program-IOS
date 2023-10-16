@@ -53,8 +53,10 @@ struct SignUpView: View {
                     ProviderButton(image: .assets.logos.googleLogo) {
                         viewModel.signUpGoogle()
                     }
-                    ProviderButton(image: .assets.logos.appleLogo) {
-                        
+                    ProviderAppleButton { request in
+                        viewModel.configureAppleSignUpRequest(request: request)
+                    } onCompletion: { result in
+                        viewModel.signUpApple(result: result)
                     }
                 }
                 .padding(.top, 22)
