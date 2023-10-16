@@ -11,6 +11,7 @@ struct AssetColors {
     let background = Color("BackgroundColor")
     let gray = Color("GrayColor")
     let gray2 = Color("Gray2Color")
+    let passwordToggleColor = Color("PasswordToggleColor")
 }
 
 extension Color {

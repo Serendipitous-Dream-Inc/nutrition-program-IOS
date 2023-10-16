@@ -40,6 +40,7 @@
 		3799EF572AC3B2B10018AB87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF562AC3B2B10018AB87 /* AppDelegate.swift */; };
 		37A2D95A2ADAD3C10019DF8F /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2D9592ADAD3C10019DF8F /* Log.swift */; };
 		37B0AAC72ADA0CBE005B4B9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */; };
+		37BEB5262ADD62AA0071E618 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BEB5252ADD62AA0071E618 /* PasswordField.swift */; };
 		37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */; };
 		37C5A1CE2ABB7185005280B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1CD2ABB7185005280B5 /* ContentView.swift */; };
 		37C5A1D02ABB7187005280B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1CF2ABB7187005280B5 /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		3799EF562AC3B2B10018AB87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A2D9592ADAD3C10019DF8F /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		37B0AAC62ADA0CBE005B4B9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37BEB5252ADD62AA0071E618 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		37C5A1C82ABB7185005280B5 /* NutritionNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutritionNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5A1CB2ABB7185005280B5 /* NutritionNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNestApp.swift; sourceTree = "<group>"; };
 		37C5A1CD2ABB7185005280B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				37F777FB2ACFA06A001C1CFA /* ProviderButton.swift */,
 				37F777FD2ACFA190001C1CFA /* OrText.swift */,
 				372077412AD9E24E008534FD /* ProviderAppleButton.swift */,
+				37BEB5252ADD62AA0071E618 /* PasswordField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				378EDCE42AD5C0DB001F5E5D /* EmailProvider.swift in Sources */,
 				372077422AD9E24E008534FD /* ProviderAppleButton.swift in Sources */,
 				370248712ACDF63300B01429 /* PrimaryTextFieldModifier.swift in Sources */,
+				37BEB5262ADD62AA0071E618 /* PasswordField.swift in Sources */,
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
 				378EDCE12AD5C08C001F5E5D /* EmailProviding.swift in Sources */,

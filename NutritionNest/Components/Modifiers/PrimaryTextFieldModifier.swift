@@ -11,7 +11,8 @@ struct PrimaryTextFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .textFieldStyle(.plain)
-            .padding(13)
+            .frame(height: 45)
+            .padding(.horizontal, 13)
             .background {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color.white)
