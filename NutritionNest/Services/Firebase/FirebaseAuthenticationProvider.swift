@@ -72,8 +72,10 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
         }
     }
     
-    @MainActor
-    func signInApple(authorization: ASAuthorization, rawNonce: String) async throws {
+    func signInApple(authorization: ASAuthorization, rawNonce: String?) async throws {
+        guard let rawNonce else {
+            fatalError("Invalid state: A login callback was received, but no login request was sent.")
+        }
         guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else {
             throw SignInError.signInFailed("Could not get credentials")
         }

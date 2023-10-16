@@ -86,7 +86,7 @@ protocol AuthenticationProviding {
     func signInGoogle(withPresenting presentingViewController: UIViewController) async throws
     
     /// Attempts to SignIn into the users account using Apple
-    func signInApple(authorization: ASAuthorization, rawNonce: String) async throws
+    func signInApple(authorization: ASAuthorization, rawNonce: String?) async throws
     
     /// Attempts to SingUp  into the users account using email and password
     ///
