@@ -31,8 +31,7 @@ struct SignUpView: View {
                     .textContentType(.emailAddress)
                     .textInputAutocapitalization(.never)
                     .padding(.top, 47)
-                SecureField("", text: $viewModel.password, prompt: Text(Localization.SignUp.Prompt.password))
-                    .primaryTextFieldStyle()
+                PasswordField(text: $viewModel.password)
                     .padding(.top, 16)
                 Text(viewModel.errorMessage)
                     .font(.custom.inter.font(size: 13, relativeTo: .footnote))
@@ -48,7 +47,7 @@ struct SignUpView: View {
                 .padding(.top, 32)
                 HStack(spacing: 9) {
                     ProviderButton(image: .assets.logos.facebookLogo) {
-                        
+                        viewModel.signUpFacebook()
                     }
                     ProviderButton(image: .assets.logos.googleLogo) {
                         viewModel.signUpGoogle()

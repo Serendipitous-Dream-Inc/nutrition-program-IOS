@@ -10,10 +10,14 @@ import FirebaseAuth
 import GoogleSignIn
 import UIKit
 import AuthenticationServices
+import FacebookLogin
+import FacebookCore
 
 struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
     let auth = Auth.auth()
+    // Facebook login manager
+    let loginManager = LoginManager()
     @Injected(\.emailProvider) var emailProvider
     
     var user: User? {
@@ -24,6 +28,7 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
     func signOut() {
         do {
+            loginManager.logOut()
             try auth.signOut()
         } catch let signOutError as NSError {
             print("Error signing out: \(signOutError)")
@@ -72,10 +77,7 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
         }
     }
     
-    func signInApple(authorization: ASAuthorization, rawNonce: String?) async throws {
-        guard let rawNonce else {
-            fatalError("Invalid state: A login callback was received, but no login request was sent.")
-        }
+    func signInApple(authorization: ASAuthorization, rawNonce: String) async throws {
         guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else {
             throw SignInError.signInFailed("Could not get credentials")
         }
@@ -90,6 +92,16 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
         let credential = OAuthProvider.appleCredential(withIDToken: idTokenString, rawNonce: rawNonce, fullName: nil)
         do {
             try await auth.signIn(with: credential)
+        } catch {
+            throw SignInError.signInFailed(String(describing: error))
+        }
+    }
+    
+    func signInFacebook() async throws {
+        let accessToken = try await requestFacebookSignIn()
+        let facebookCredential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+        do {
+            try await auth.signIn(with: facebookCredential)
         } catch {
             throw SignInError.signInFailed(String(describing: error))
         }
@@ -110,6 +122,24 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
             case .weakPassword:
                 throw SignUpError.weakPassword
             default: throw SignUpError.signUpFailed(String(describing: error))
+            }
+        }
+    }
+    
+    // MARK: Other methods
+    @MainActor
+    func requestFacebookSignIn() async throws -> AccessToken {
+        return try await withCheckedThrowingContinuation { continuation in
+            loginManager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
+                if let error = error {
+                    continuation.resume(throwing: SignInError.signInFailed(String(describing: error)))
+                    return
+                }
+                guard let accessToken = result?.token else {
+                    continuation.resume(throwing: SignInError.signInFailed("Facebook Sign In failed to get access token"))
+                    return
+                }
+                continuation.resume(returning: accessToken)
             }
         }
     }

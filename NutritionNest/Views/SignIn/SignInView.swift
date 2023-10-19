@@ -49,7 +49,7 @@ struct SignInView: View {
                 .padding(.top, 32)
                 HStack(spacing: 9) {
                     ProviderButton(image: .assets.logos.facebookLogo) {
-                        
+                        viewModel.signInFacebook()
                     }
                     ProviderButton(image: .assets.logos.googleLogo) {
                         viewModel.signInGoogle()
