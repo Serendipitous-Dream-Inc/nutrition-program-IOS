@@ -92,6 +92,9 @@ protocol AuthenticationProviding {
     ///     - rawNonce: The raw nonce associated with the Sign in with Apple Auth credential being created.
     func signInApple(authorization: ASAuthorization, rawNonce: String) async throws
     
+    /// Attempts to SignIn into the users account using Facebook
+    func signInFacebook() async throws
+    
     /// Attempts to SingUp  into the users account using email and password
     ///
     /// - Parameters:

@@ -47,6 +47,8 @@
 		37C5A1D42ABB7187005280B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C5A1D32ABB7187005280B5 /* Preview Assets.xcassets */; };
 		37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1E02ABB7F32005280B5 /* SignUpView.swift */; };
 		37C5A1E42ABB7F5B005280B5 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5A1E32ABB7F5B005280B5 /* SignInView.swift */; };
+		37CD3F272AE09F40000F0245 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 37CD3F262AE09F40000F0245 /* FacebookCore */; };
+		37CD3F292AE0A3F4000F0245 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 37CD3F282AE0A3F4000F0245 /* FacebookLogin */; };
 		37F777FA2ACF9E12001C1CFA /* AssetImages+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F777F92ACF9E12001C1CFA /* AssetImages+Constants.swift */; };
 		37F777FC2ACFA06A001C1CFA /* ProviderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F777FB2ACFA06A001C1CFA /* ProviderButton.swift */; };
 		37F777FE2ACFA190001C1CFA /* OrText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F777FD2ACFA190001C1CFA /* OrText.swift */; };
@@ -121,9 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CD3F292AE0A3F4000F0245 /* FacebookLogin in Frameworks */,
 				3799EF552AC3B2100018AB87 /* FirebaseAuth in Frameworks */,
 				3799EF512AC3B2100018AB87 /* FirebaseAnalytics in Frameworks */,
 				3720773D2AD8D35D008534FD /* GoogleSignIn in Frameworks */,
+				37CD3F272AE09F40000F0245 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,8 @@
 				3799EF502AC3B2100018AB87 /* FirebaseAnalytics */,
 				3799EF542AC3B2100018AB87 /* FirebaseAuth */,
 				3720773C2AD8D35D008534FD /* GoogleSignIn */,
+				37CD3F262AE09F40000F0245 /* FacebookCore */,
+				37CD3F282AE0A3F4000F0245 /* FacebookLogin */,
 			);
 			productName = NutritionNest;
 			productReference = 37C5A1C82ABB7185005280B5 /* NutritionNest.app */;
@@ -439,6 +445,7 @@
 			packageReferences = (
 				3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				3720773A2AD8D06A008534FD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				37CD3F252AE09F40000F0245 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 37C5A1C92ABB7185005280B5 /* Products */;
 			projectDirPath = "";
@@ -873,6 +880,14 @@
 				minimumVersion = 10.15.0;
 			};
 		};
+		37CD3F252AE09F40000F0245 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -890,6 +905,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3799EF4F2AC3B2100018AB87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		37CD3F262AE09F40000F0245 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37CD3F252AE09F40000F0245 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		37CD3F282AE0A3F4000F0245 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37CD3F252AE09F40000F0245 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

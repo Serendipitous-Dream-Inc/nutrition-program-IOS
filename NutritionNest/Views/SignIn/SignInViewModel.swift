@@ -72,6 +72,17 @@ class SignInViewModel: ObservableObject {
         }
     }
     
+    func signInFacebook() {
+        Task {
+            do {
+                try await authenticationProvider.signInFacebook()
+                print("Log in Facebook Success")
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     func configureAppleSignInRequest(request: ASAuthorizationAppleIDRequest) {
         let nonce = CryptoHelper.randomNonceString()
         currentNonce = nonce

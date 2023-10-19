@@ -47,7 +47,7 @@ struct SignUpView: View {
                 .padding(.top, 32)
                 HStack(spacing: 9) {
                     ProviderButton(image: .assets.logos.facebookLogo) {
-                        
+                        viewModel.signUpFacebook()
                     }
                     ProviderButton(image: .assets.logos.googleLogo) {
                         viewModel.signUpGoogle()

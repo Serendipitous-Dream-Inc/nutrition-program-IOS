@@ -10,10 +10,14 @@ import FirebaseAuth
 import GoogleSignIn
 import UIKit
 import AuthenticationServices
+import FacebookLogin
+import FacebookCore
 
 struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
     let auth = Auth.auth()
+    // Facebook login manager
+    let loginManager = LoginManager()
     @Injected(\.emailProvider) var emailProvider
     
     var user: User? {
@@ -24,6 +28,7 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
     
     func signOut() {
         do {
+            loginManager.logOut()
             try auth.signOut()
         } catch let signOutError as NSError {
             print("Error signing out: \(signOutError)")
@@ -92,6 +97,16 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
         }
     }
     
+    func signInFacebook() async throws {
+        let accessToken = try await requestFacebookSignIn()
+        let facebookCredential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+        do {
+            try await auth.signIn(with: facebookCredential)
+        } catch {
+            throw SignInError.signInFailed(String(describing: error))
+        }
+    }
+    
     func signUp(email: String, password: String) async throws {
         do {
             try await auth.createUser(withEmail: email, password: password)
@@ -107,6 +122,24 @@ struct FirebaseAuthenticationProvider: AuthenticationProviding {
             case .weakPassword:
                 throw SignUpError.weakPassword
             default: throw SignUpError.signUpFailed(String(describing: error))
+            }
+        }
+    }
+    
+    // MARK: Other methods
+    @MainActor
+    func requestFacebookSignIn() async throws -> AccessToken {
+        return try await withCheckedThrowingContinuation { continuation in
+            loginManager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
+                if let error = error {
+                    continuation.resume(throwing: SignInError.signInFailed(String(describing: error)))
+                    return
+                }
+                guard let accessToken = result?.token else {
+                    continuation.resume(throwing: SignInError.signInFailed("Facebook Sign In failed to get access token"))
+                    return
+                }
+                continuation.resume(returning: accessToken)
             }
         }
     }
