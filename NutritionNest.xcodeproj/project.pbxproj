@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1870E2CD2AF1985700521EB4 /* ViewGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870E2CC2AF1985700521EB4 /* ViewGender.swift */; };
+		1870E2CF2AF1989300521EB4 /* ViewGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870E2CE2AF1989300521EB4 /* ViewGoal.swift */; };
+		1870E2D12AF198D900521EB4 /* ViewBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870E2D02AF198D900521EB4 /* ViewBirthday.swift */; };
+		1870E2D32AF1990900521EB4 /* ViewWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870E2D22AF1990900521EB4 /* ViewWeight.swift */; };
+		1870E2D52AF1993C00521EB4 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870E2D42AF1993C00521EB4 /* ViewStatus.swift */; };
 		18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18905E062AC4FABC00274E8D /* OnboardingView.swift */; };
 		370248652ACDE75000B01429 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370248642ACDE75000B01429 /* SignInViewModel.swift */; };
 		3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */; };
@@ -65,6 +70,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1870E2CC2AF1985700521EB4 /* ViewGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGender.swift; sourceTree = "<group>"; };
+		1870E2CE2AF1989300521EB4 /* ViewGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGoal.swift; sourceTree = "<group>"; };
+		1870E2D02AF198D900521EB4 /* ViewBirthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBirthday.swift; sourceTree = "<group>"; };
+		1870E2D22AF1990900521EB4 /* ViewWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWeight.swift; sourceTree = "<group>"; };
+		1870E2D42AF1993C00521EB4 /* ViewStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatus.swift; sourceTree = "<group>"; };
 		18905E062AC4FABC00274E8D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		370248642ACDE75000B01429 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		3702486B2ACDF4A300B01429 /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
@@ -138,6 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				18905E062AC4FABC00274E8D /* OnboardingView.swift */,
+				1870E2CE2AF1989300521EB4 /* ViewGoal.swift */,
+				1870E2CC2AF1985700521EB4 /* ViewGender.swift */,
+				1870E2D02AF198D900521EB4 /* ViewBirthday.swift */,
+				1870E2D22AF1990900521EB4 /* ViewWeight.swift */,
+				1870E2D42AF1993C00521EB4 /* ViewStatus.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -521,10 +536,12 @@
 				37A2D95A2ADAD3C10019DF8F /* Log.swift in Sources */,
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */,
+				1870E2D12AF198D900521EB4 /* ViewBirthday.swift in Sources */,
 				37F777FE2ACFA190001C1CFA /* OrText.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
 				370248772ACDFB9D00B01429 /* SmallRoundButton.swift in Sources */,
 				37F777FC2ACFA06A001C1CFA /* ProviderButton.swift in Sources */,
+				1870E2D32AF1990900521EB4 /* ViewWeight.swift in Sources */,
 				3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */,
 				372077442AD9EF36008534FD /* CryptoHelper.swift in Sources */,
 				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
@@ -536,6 +553,8 @@
 				37BEB5262ADD62AA0071E618 /* PasswordField.swift in Sources */,
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
+				1870E2CF2AF1989300521EB4 /* ViewGoal.swift in Sources */,
+				1870E2D52AF1993C00521EB4 /* ViewStatus.swift in Sources */,
 				378EDCE12AD5C08C001F5E5D /* EmailProviding.swift in Sources */,
 				37C5A1CC2ABB7185005280B5 /* NutritionNestApp.swift in Sources */,
 				370248752ACDFAA000B01429 /* SignUpViewModel.swift in Sources */,
@@ -547,6 +566,7 @@
 				37F777FA2ACF9E12001C1CFA /* AssetImages+Constants.swift in Sources */,
 				370433562ACC6763008F2703 /* AssetColors+Constants.swift in Sources */,
 				370248652ACDE75000B01429 /* SignInViewModel.swift in Sources */,
+				1870E2CD2AF1985700521EB4 /* ViewGender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
