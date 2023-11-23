@@ -10,6 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     
     @StateObject private var viewModel = SignUpViewModel()
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
@@ -26,12 +27,14 @@ struct SignUpView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
                     .padding(.horizontal, 30)
-                TextField("", text: $viewModel.email, prompt: Text(Localization.SignUp.Prompt.email))
+                TextField("", text: $viewModel.email, prompt: Text(Localization.Shared.Prompt.email))
                     .primaryTextFieldStyle()
                     .textContentType(.emailAddress)
                     .textInputAutocapitalization(.never)
                     .padding(.top, 47)
-                PasswordField(text: $viewModel.password)
+                PasswordField(text: $viewModel.password, prompt: Localization.Shared.Prompt.password)
+                    .padding(.top, 16)
+                PasswordField(text: $viewModel.password, prompt: Localization.Shared.Prompt.confirmPassword)
                     .padding(.top, 16)
                 Text(viewModel.errorMessage)
                     .font(.custom.inter.font(size: 13, relativeTo: .footnote))
@@ -63,11 +66,24 @@ struct SignUpView: View {
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.horizontal, 35)
         }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton {
+                    dismiss()
+                }
+            }
+        }
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        NavigationStack {
+            Text("Test")
+                .navigationDestination(isPresented: .constant(true)) {
+                    SignUpView()
+                }
+        }
     }
 }

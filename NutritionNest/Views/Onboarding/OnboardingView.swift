@@ -7,6 +7,12 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    private enum ViewPath {
+        case signUp
+        case logIn
+    }
+    
     var body: some View {
         VStack {
             Text(Localization.Onboarding.welcome).font(.custom.inter.font(size: 26)).bold().padding()
@@ -17,9 +23,7 @@ struct OnboardingView: View {
                 .foregroundColor(.accentColor)
                 .padding(.top, 10)
 
-            Button {
-
-            } label: {
+            NavigationLink(value: ViewPath.signUp) {
                 Text(Localization.Onboarding.signup)
                     .font(.custom.inter.font(size: 18)).bold()
                     .padding(EdgeInsets(top: 28, leading: 26, bottom: 28, trailing: 26))
@@ -32,9 +36,7 @@ struct OnboardingView: View {
             HStack {
                 Text(Localization.Onboarding.account)
                     .font(.custom.inter.font(size: 18))
-                Button {
-
-                } label: {
+                NavigationLink(value: ViewPath.logIn) {
                     Text(Localization.Onboarding.login)
                         .font(.custom.inter.font(size: 18))
                         .bold()
@@ -46,11 +48,20 @@ struct OnboardingView: View {
 
         }
         .padding()
+        .navigationDestination(for: ViewPath.self) { path in
+            if path == .signUp {
+                SignUpView()
+            } else {
+                SignInView()
+            }
+        }
     }
 }
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        NavigationStack {
+            OnboardingView()
+        }
     }
 }

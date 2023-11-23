@@ -6,6 +6,11 @@
   
 */
 
+// Shared
+"Shared.Prompt.Email" = "Email";
+"Shared.Prompt.Password" = "Password";
+"Shared.Prompt.ConfirmPassword" = "Confirm Password";
+
 // Onboarding
 "Onboarding.Welcome" = "Welcome to NutritionNest";
 "Onboarding.Signup" = "Sounds good. Lets Sign up!";
@@ -15,20 +20,17 @@
 // SignUp
 "SignUp.Title" = "NutritionNest";
 "SignUp.Message" = "Our AI friend is excited to assist you on your health journey!";
-"SignUp.Prompt.Email" = "Email";
-"SignUp.Prompt.Password" = "Password";
 "SignUp.Button.SignUp" = "Sign Up";
 "SignUp.Error.EmailAlreadyInUse" = "Email already in use";
 "SignUp.Error.InvalidEmail" = "Invalid email format";
 "SignUp.Error.WeakPassword" = "The password must be 6 characters long or more";
 "SignUp.Error.EmailEmpty" = "Email can't be empty";
 "SignUp.Error.PasswordEmpty" = "Password can't be empty";
+"SignUp.Error.PasswordMismatch" = "Passwords are not matching";
 
 // LogIn
 "LogIn.Title" = "NutritionNest";
 "LogIn.Message" = "Our AI friend is excited to assist you on your health journey!";
-"LogIn.Prompt.Email" = "Email";
-"LogIn.Prompt.Password" = "Password";
 "LogIn.Button.LogIn" = "Log In";
 "LogIn.Error.EmailNotVerified" = "Email hasn't been verified!";
 "LogIn.Error.EmailEmpty" = "Email field is empty";

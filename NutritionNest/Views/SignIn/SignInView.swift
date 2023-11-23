@@ -11,6 +11,7 @@ import AuthenticationServices
 struct SignInView: View {
     
     @StateObject private var viewModel = SignInViewModel()
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
@@ -27,13 +28,12 @@ struct SignInView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
                     .padding(.horizontal, 30)
-                TextField("", text: $viewModel.email, prompt: Text(Localization.LogIn.Prompt.email))
+                TextField("", text: $viewModel.email, prompt: Text(Localization.Shared.Prompt.email))
                     .primaryTextFieldStyle()
                     .textContentType(.emailAddress)
                     .textInputAutocapitalization(.never)
                     .padding(.top, 47)
-                SecureField("", text: $viewModel.password, prompt: Text(Localization.LogIn.Prompt.password))
-                    .primaryTextFieldStyle()
+                PasswordField(text: $viewModel.password, prompt: Localization.Shared.Prompt.password)
                     .padding(.top, 16)
                 Text(viewModel.errorMessage)
                     .font(.custom.inter.font(size: 13, relativeTo: .footnote))
@@ -64,6 +64,14 @@ struct SignInView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.horizontal, 35)
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton {
+                    dismiss()
+                }
+            }
         }
     }
 }
