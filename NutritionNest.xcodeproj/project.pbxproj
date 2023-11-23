@@ -33,6 +33,8 @@
 		377FAE242ABB976A00877F37 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 377FAE232ABB976A00877F37 /* .swiftlint.yml */; };
 		378EDCE12AD5C08C001F5E5D /* EmailProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378EDCE02AD5C08C001F5E5D /* EmailProviding.swift */; };
 		378EDCE42AD5C0DB001F5E5D /* EmailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378EDCE32AD5C0DB001F5E5D /* EmailProvider.swift */; };
+		378FBC222B0F933100AA04FB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC212B0F933100AA04FB /* LaunchScreenView.swift */; };
+		378FBC242B0F9BB900AA04FB /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC232B0F9BB900AA04FB /* NavigationManager.swift */; };
 		3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */; };
 		3799EF342AC3AAA80018AB87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF332AC3AAA80018AB87 /* User.swift */; };
 		3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF392AC3AE710018AB87 /* InjectedValues.swift */; };
@@ -96,6 +98,8 @@
 		377FAE232ABB976A00877F37 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		378EDCE02AD5C08C001F5E5D /* EmailProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailProviding.swift; sourceTree = "<group>"; };
 		378EDCE32AD5C0DB001F5E5D /* EmailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailProvider.swift; sourceTree = "<group>"; };
+		378FBC212B0F933100AA04FB /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		378FBC232B0F9BB900AA04FB /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProviding.swift; sourceTree = "<group>"; };
 		3799EF332AC3AAA80018AB87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3799EF392AC3AE710018AB87 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
@@ -219,6 +223,14 @@
 				378EDCE32AD5C0DB001F5E5D /* EmailProvider.swift */,
 			);
 			path = Email;
+			sourceTree = "<group>";
+		};
+		378FBC202B0F931300AA04FB /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				378FBC212B0F933100AA04FB /* LaunchScreenView.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		3799EF2D2AC3A8530018AB87 /* Resources */ = {
@@ -349,6 +361,7 @@
 		37C5A1DA2ABB7CB2005280B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				378FBC202B0F931300AA04FB /* LaunchScreen */,
 				18905E052AC4FAA700274E8D /* Onboarding */,
 				37C5A1E22ABB7F38005280B5 /* SignIn */,
 				37C5A1DF2ABB7F1A005280B5 /* SignUp */,
@@ -361,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				37C5A1CD2ABB7185005280B5 /* ContentView.swift */,
+				378FBC232B0F9BB900AA04FB /* NavigationManager.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -539,10 +553,12 @@
 				1870E2D12AF198D900521EB4 /* ViewBirthday.swift in Sources */,
 				37F777FE2ACFA190001C1CFA /* OrText.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
+				378FBC222B0F933100AA04FB /* LaunchScreenView.swift in Sources */,
 				370248772ACDFB9D00B01429 /* SmallRoundButton.swift in Sources */,
 				37F777FC2ACFA06A001C1CFA /* ProviderButton.swift in Sources */,
 				1870E2D32AF1990900521EB4 /* ViewWeight.swift in Sources */,
 				3702486C2ACDF4A300B01429 /* TextField+Extensions.swift in Sources */,
+				378FBC242B0F9BB900AA04FB /* NavigationManager.swift in Sources */,
 				372077442AD9EF36008534FD /* CryptoHelper.swift in Sources */,
 				18905E072AC4FABC00274E8D /* OnboardingView.swift in Sources */,
 				37C5A1E42ABB7F5B005280B5 /* SignInView.swift in Sources */,

@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject private var navigationManager = NavigationManager()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            if navigationManager.presentingViewState == .launchScreenView {
+                LaunchScreenView()
+            } else if navigationManager.presentingViewState == .onBoardingView {
+                OnboardingView()
+            } else {
+                // TODO: Journal View
+            }
         }
-        .padding()
+        .onAppear(perform: navigationManager.onAppear)
     }
 }
 
