@@ -11,6 +11,7 @@ import AuthenticationServices
 struct SignInView: View {
     
     @StateObject private var viewModel = SignInViewModel()
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
@@ -64,6 +65,14 @@ struct SignInView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.horizontal, 35)
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton {
+                    dismiss()
+                }
+            }
         }
     }
 }

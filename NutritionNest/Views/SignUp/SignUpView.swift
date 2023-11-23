@@ -10,7 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     
     @StateObject private var viewModel = SignUpViewModel()
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ZStack {
@@ -69,12 +69,8 @@ struct SignUpView: View {
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                Button {
+                BackButton {
                     dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .bold()
-                        .foregroundColor(.black)
                 }
             }
         }

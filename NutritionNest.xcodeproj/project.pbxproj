@@ -36,6 +36,7 @@
 		378FBC222B0F933100AA04FB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC212B0F933100AA04FB /* LaunchScreenView.swift */; };
 		378FBC242B0F9BB900AA04FB /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC232B0F9BB900AA04FB /* NavigationManager.swift */; };
 		378FBC272B0FC3AD00AA04FB /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC262B0FC3AD00AA04FB /* CreateAccountView.swift */; };
+		378FBC2B2B100B1B00AA04FB /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC2A2B100B1B00AA04FB /* BackButton.swift */; };
 		3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */; };
 		3799EF342AC3AAA80018AB87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF332AC3AAA80018AB87 /* User.swift */; };
 		3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF392AC3AE710018AB87 /* InjectedValues.swift */; };
@@ -102,6 +103,7 @@
 		378FBC212B0F933100AA04FB /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		378FBC232B0F9BB900AA04FB /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		378FBC262B0FC3AD00AA04FB /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		378FBC2A2B100B1B00AA04FB /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProviding.swift; sourceTree = "<group>"; };
 		3799EF332AC3AAA80018AB87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3799EF392AC3AE710018AB87 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				37F777FD2ACFA190001C1CFA /* OrText.swift */,
 				372077412AD9E24E008534FD /* ProviderAppleButton.swift */,
 				37BEB5252ADD62AA0071E618 /* PasswordField.swift */,
+				378FBC2A2B100B1B00AA04FB /* BackButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				370248712ACDF63300B01429 /* PrimaryTextFieldModifier.swift in Sources */,
 				37BEB5262ADD62AA0071E618 /* PasswordField.swift in Sources */,
 				3799EF3E2AC3AED00018AB87 /* Injected.swift in Sources */,
+				378FBC2B2B100B1B00AA04FB /* BackButton.swift in Sources */,
 				3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */,
 				1870E2CF2AF1989300521EB4 /* ViewGoal.swift in Sources */,
 				1870E2D52AF1993C00521EB4 /* ViewStatus.swift in Sources */,
@@ -675,6 +679,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -735,6 +740,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
