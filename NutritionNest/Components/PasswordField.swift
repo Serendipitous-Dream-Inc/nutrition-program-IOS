@@ -10,6 +10,7 @@ import SwiftUI
 struct PasswordField: View {
     
     @Binding var text: String
+    let prompt: String
     @State private var showText = false
     
     var imageName: String {
@@ -19,10 +20,10 @@ struct PasswordField: View {
     var body: some View {
         Group {
             if showText {
-                TextField("", text: $text, prompt: Text(Localization.SignUp.Prompt.password))
+                TextField("", text: $text, prompt: Text(prompt))
                     .primaryTextFieldStyle()
             } else {
-                SecureField("", text: $text, prompt: Text(Localization.SignUp.Prompt.password))
+                SecureField("", text: $text, prompt: Text(prompt))
                     .primaryTextFieldStyle()
             }
         }
@@ -39,6 +40,6 @@ struct PasswordField: View {
 }
 
 #Preview {
-    PasswordField(text: .constant("123"))
+    PasswordField(text: .constant("123"), prompt: Localization.Shared.Prompt.password)
         .padding(.horizontal)
 }

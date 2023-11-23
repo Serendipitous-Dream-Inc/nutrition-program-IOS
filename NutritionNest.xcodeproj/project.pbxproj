@@ -35,6 +35,7 @@
 		378EDCE42AD5C0DB001F5E5D /* EmailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378EDCE32AD5C0DB001F5E5D /* EmailProvider.swift */; };
 		378FBC222B0F933100AA04FB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC212B0F933100AA04FB /* LaunchScreenView.swift */; };
 		378FBC242B0F9BB900AA04FB /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC232B0F9BB900AA04FB /* NavigationManager.swift */; };
+		378FBC272B0FC3AD00AA04FB /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FBC262B0FC3AD00AA04FB /* CreateAccountView.swift */; };
 		3799EF312AC3A8AA0018AB87 /* AuthenticationProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */; };
 		3799EF342AC3AAA80018AB87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF332AC3AAA80018AB87 /* User.swift */; };
 		3799EF3A2AC3AE710018AB87 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799EF392AC3AE710018AB87 /* InjectedValues.swift */; };
@@ -100,6 +101,7 @@
 		378EDCE32AD5C0DB001F5E5D /* EmailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailProvider.swift; sourceTree = "<group>"; };
 		378FBC212B0F933100AA04FB /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		378FBC232B0F9BB900AA04FB /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		378FBC262B0FC3AD00AA04FB /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		3799EF302AC3A8AA0018AB87 /* AuthenticationProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProviding.swift; sourceTree = "<group>"; };
 		3799EF332AC3AAA80018AB87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3799EF392AC3AE710018AB87 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
@@ -233,6 +235,14 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		378FBC252B0FC39300AA04FB /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				378FBC262B0FC3AD00AA04FB /* CreateAccountView.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
 		3799EF2D2AC3A8530018AB87 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +371,7 @@
 		37C5A1DA2ABB7CB2005280B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				378FBC252B0FC39300AA04FB /* CreateAccount */,
 				378FBC202B0F931300AA04FB /* LaunchScreen */,
 				18905E052AC4FAA700274E8D /* Onboarding */,
 				37C5A1E22ABB7F38005280B5 /* SignIn */,
@@ -551,6 +562,7 @@
 				374BB08C2ABE5E880010C707 /* Localization+Constants.swift in Sources */,
 				3704335C2ACC6BFC008F2703 /* CustomFonts+Constants.swift in Sources */,
 				1870E2D12AF198D900521EB4 /* ViewBirthday.swift in Sources */,
+				378FBC272B0FC3AD00AA04FB /* CreateAccountView.swift in Sources */,
 				37F777FE2ACFA190001C1CFA /* OrText.swift in Sources */,
 				37C5A1E12ABB7F32005280B5 /* SignUpView.swift in Sources */,
 				378FBC222B0F933100AA04FB /* LaunchScreenView.swift in Sources */,

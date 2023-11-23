@@ -12,6 +12,7 @@ import AuthenticationServices
 class SignUpViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var confirmPassword: String = ""
     @Published var errorMessage: String = ""
     @Published var showErrorMessage: Bool = false
     
@@ -96,6 +97,10 @@ class SignUpViewModel: ObservableObject {
         }
         guard !password.isEmpty else {
             showErrorMessage(with: Localization.SignUp.Error.passwordEmpty)
+            return false
+        }
+        guard password == confirmPassword else {
+            showErrorMessage(with: Localization.SignUp.Error.passwordMismatch)
             return false
         }
         return true
