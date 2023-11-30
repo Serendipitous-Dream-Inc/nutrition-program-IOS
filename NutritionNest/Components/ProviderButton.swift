@@ -29,5 +29,5 @@ struct ProviderButton: View {
 }
 
 #Preview {
-    ProviderButton(image: .assets.logos.appleLogo, action: {})
+    ProviderButton(image: AssetImages.Logos.appleLogo, action: {})
 }

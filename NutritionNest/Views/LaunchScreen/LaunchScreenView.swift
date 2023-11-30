@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LaunchScreenView: View {
     var body: some View {
-        Image.assets.logos.appLogo
+        AssetImages.Logos.appLogo
             .toolbar(.hidden, for: .navigationBar)
     }
 }

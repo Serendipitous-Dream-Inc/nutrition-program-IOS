@@ -49,10 +49,10 @@ struct SignUpView: View {
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {
-                    ProviderButton(image: .assets.logos.facebookLogo) {
+                    ProviderButton(image: AssetImages.Logos.facebookLogo) {
                         viewModel.signUpFacebook()
                     }
-                    ProviderButton(image: .assets.logos.googleLogo) {
+                    ProviderButton(image: AssetImages.Logos.googleLogo) {
                         viewModel.signUpGoogle()
                     }
                     ProviderAppleButton { request in

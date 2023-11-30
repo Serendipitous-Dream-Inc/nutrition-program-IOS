@@ -16,7 +16,7 @@ struct ProviderAppleButton: View {
     @State private var request: ASAuthorizationAppleIDRequest?
     
     var body: some View {
-        ProviderButton(image: .assets.logos.appleLogo) {
+        ProviderButton(image: AssetImages.Logos.appleLogo) {
             createRequest()
         }
         .background {

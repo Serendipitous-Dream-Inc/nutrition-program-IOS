@@ -48,10 +48,10 @@ struct SignInView: View {
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {
-                    ProviderButton(image: .assets.logos.facebookLogo) {
+                    ProviderButton(image: AssetImages.Logos.facebookLogo) {
                         viewModel.signInFacebook()
                     }
-                    ProviderButton(image: .assets.logos.googleLogo) {
+                    ProviderButton(image: AssetImages.Logos.googleLogo) {
                         viewModel.signInGoogle()
                     }
                     ProviderAppleButton { request in

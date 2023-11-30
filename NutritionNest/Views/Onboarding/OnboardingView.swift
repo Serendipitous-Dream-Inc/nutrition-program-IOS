@@ -16,7 +16,7 @@ struct OnboardingView: View {
     var body: some View {
         VStack {
             Text(Localization.Onboarding.welcome).font(CustomFonts.inter.font(size: 26)).bold().padding()
-            Image.assets.logos.appLogo
+            AssetImages.Logos.appLogo
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 460)
