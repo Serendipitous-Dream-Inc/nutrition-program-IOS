@@ -21,6 +21,6 @@ struct PrimaryTextFieldModifier: ViewModifier {
                             .stroke(AssetColors.gray2, lineWidth: 1)
                     }
             }
-            .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
+            .font(CustomFonts.inter.font(size: 15, relativeTo: .subheadline))
     }
 }
