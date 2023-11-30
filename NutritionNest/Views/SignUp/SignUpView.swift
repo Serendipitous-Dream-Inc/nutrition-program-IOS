@@ -14,7 +14,7 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            Color.asset.background
+            AssetColors.background
                 .ignoresSafeArea()
             VStack(spacing: 0) {
                 Text(Localization.SignUp.title)
@@ -23,7 +23,7 @@ struct SignUpView: View {
                     .padding(.top, 32)
                 Text(Localization.SignUp.message)
                     .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
-                    .foregroundColor(.asset.gray)
+                    .foregroundColor(AssetColors.gray)
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
                     .padding(.horizontal, 30)

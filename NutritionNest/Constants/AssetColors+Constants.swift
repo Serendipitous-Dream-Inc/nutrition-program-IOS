@@ -7,13 +7,9 @@
 
 import SwiftUI
 
-struct AssetColors {
-    let background = Color("BackgroundColor")
-    let gray = Color("GrayColor")
-    let gray2 = Color("Gray2Color")
-    let passwordToggleColor = Color("PasswordToggleColor")
-}
-
-extension Color {
-    static let asset = AssetColors()
+enum AssetColors {
+    static let background = Color("BackgroundColor")
+    static let gray = Color("Gray1Color")
+    static let gray2 = Color("Gray2Color")
+    static let passwordToggleColor = Color("PasswordToggleColor")
 }

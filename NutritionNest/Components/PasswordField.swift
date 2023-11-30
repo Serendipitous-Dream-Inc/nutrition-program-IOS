@@ -33,7 +33,7 @@ struct PasswordField: View {
             } label: {
                 Image(systemName: imageName)
             }
-            .tint(Color.asset.passwordToggleColor)
+            .tint(AssetColors.passwordToggleColor)
             .padding(.trailing, 10)
         }
     }

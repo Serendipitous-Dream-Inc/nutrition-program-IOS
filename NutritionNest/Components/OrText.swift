@@ -15,7 +15,7 @@ struct OrText: View {
             Text("Or")
                 .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
                 .padding(.horizontal, 12)
-                .background(Color.asset.background)
+                .background(AssetColors.background)
         }
     }
 }

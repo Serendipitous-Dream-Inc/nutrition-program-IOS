@@ -22,7 +22,7 @@ struct ProviderButton: View {
                 .overlay {
                     RoundedRectangle(cornerRadius: 8)
                         .inset(by: 0.5)
-                        .stroke(Color.asset.gray2, lineWidth: 1.0)
+                        .stroke(AssetColors.gray2, lineWidth: 1.0)
                 }
         })
     }
