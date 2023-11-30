@@ -13,9 +13,9 @@ struct OrText: View {
             Rectangle()
                 .frame(width: 100, height: 2)
             Text("Or")
-                .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
+                .font(CustomFonts.inter.font(size: 15, relativeTo: .subheadline))
                 .padding(.horizontal, 12)
-                .background(Color.asset.background)
+                .background(AssetColors.background)
         }
     }
 }

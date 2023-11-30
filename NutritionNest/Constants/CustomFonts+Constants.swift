@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CustomFonts {
-    let inter = CustomFont("Inter")
+enum CustomFonts {
+    static let inter = CustomFont("Inter")
 }
 
 struct CustomFont {
@@ -29,8 +29,4 @@ struct CustomFont {
     func font(fixedSize: CGFloat) -> Font {
         Font.custom(name, fixedSize: fixedSize)
     }
-}
-
-extension Font {
-    static let custom = CustomFonts()
 }

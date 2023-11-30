@@ -18,9 +18,9 @@ struct PrimaryTextFieldModifier: ViewModifier {
                     .fill(Color.white)
                     .overlay {
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.asset.gray2, lineWidth: 1)
+                            .stroke(AssetColors.gray2, lineWidth: 1)
                     }
             }
-            .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
+            .font(CustomFonts.inter.font(size: 15, relativeTo: .subheadline))
     }
 }

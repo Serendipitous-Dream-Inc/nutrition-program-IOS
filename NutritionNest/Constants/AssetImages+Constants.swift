@@ -7,16 +7,11 @@
 
 import SwiftUI
 
-struct AssetImages {
-    struct Logos {
-        let appleLogo = Image("AppleLogo")
-        let facebookLogo = Image("FacebookLogo")
-        let googleLogo = Image("GoogleLogo")
-        let appLogo = Image("AppLogo")
+enum AssetImages {
+    enum Logos {
+        static let appleLogo = Image("AppleLogo")
+        static let facebookLogo = Image("FacebookLogo")
+        static let googleLogo = Image("GoogleLogo")
+        static let appLogo = Image("AppLogo")
     }
-    let logos = Logos()
-}
-
-extension Image {
-    static let assets = AssetImages()
 }

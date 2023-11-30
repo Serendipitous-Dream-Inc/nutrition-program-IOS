@@ -14,16 +14,16 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            Color.asset.background
+            AssetColors.background
                 .ignoresSafeArea()
             VStack(spacing: 0) {
                 Text(Localization.SignUp.title)
-                    .font(.custom.inter.font(size: 25, relativeTo: .title))
+                    .font(CustomFonts.inter.font(size: 25, relativeTo: .title))
                     .bold()
                     .padding(.top, 32)
                 Text(Localization.SignUp.message)
-                    .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
-                    .foregroundColor(.asset.gray)
+                    .font(CustomFonts.inter.font(size: 15, relativeTo: .subheadline))
+                    .foregroundColor(AssetColors.gray)
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
                     .padding(.horizontal, 30)
@@ -37,7 +37,7 @@ struct SignUpView: View {
                 PasswordField(text: $viewModel.password, prompt: Localization.Shared.Prompt.confirmPassword)
                     .padding(.top, 16)
                 Text(viewModel.errorMessage)
-                    .font(.custom.inter.font(size: 13, relativeTo: .footnote))
+                    .font(CustomFonts.inter.font(size: 13, relativeTo: .footnote))
                     .opacity(viewModel.showErrorMessage ? 1 : 0)
                     .foregroundColor(.red)
                     .frame(height: 13)
@@ -49,10 +49,10 @@ struct SignUpView: View {
                 OrText()
                 .padding(.top, 32)
                 HStack(spacing: 9) {
-                    ProviderButton(image: .assets.logos.facebookLogo) {
+                    ProviderButton(image: AssetImages.Logos.facebookLogo) {
                         viewModel.signUpFacebook()
                     }
-                    ProviderButton(image: .assets.logos.googleLogo) {
+                    ProviderButton(image: AssetImages.Logos.googleLogo) {
                         viewModel.signUpGoogle()
                     }
                     ProviderAppleButton { request in

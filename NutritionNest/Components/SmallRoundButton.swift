@@ -15,7 +15,7 @@ struct SmallRoundButton: View {
     var body: some View {
         Button(action: action, label: {
             Text(title)
-                .font(.custom.inter.font(size: 15, relativeTo: .subheadline))
+                .font(CustomFonts.inter.font(size: 15, relativeTo: .subheadline))
                 .foregroundColor(.white)
                 .bold()
                 .padding(.vertical, 11)
