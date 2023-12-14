@@ -52,7 +52,7 @@ struct ViewBirthday: View {
                     }
                 }.padding(.top, -10)
 
-                Text("What is your Birthdate?").font(.custom("Inter", size: 26)).padding(.top, 25)
+                Text(Localization.ViewBirthday.birthday).font(CustomFonts.inter.font(size: 26)).padding(.top, 25)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 20).fill(Color.blue).frame(width: 310, height: 35)
@@ -107,8 +107,7 @@ struct ViewBirthday: View {
 
                 } label: {
 
-                    Text("Next")
-                        .font(.custom("Inter", size: 25)).bold()
+                    Text(Localization.ViewBirthday.next).font(CustomFonts.inter.font(size: 25)).bold()
                         .padding(EdgeInsets(top: 20, leading: 140, bottom: 20, trailing: 140))
                         .background(Color.accentColor)
                         .foregroundColor(.white)
@@ -120,8 +119,7 @@ struct ViewBirthday: View {
 
                 } label: {
 
-                    Text("Skip")
-                        .font(.custom("Inter", size: 18)).bold()
+                    Text(Localization.ViewBirthday.skip).font(CustomFonts.inter.font(size: 18)).bold()
                         .padding(.top, 25)
 
                 }

@@ -52,7 +52,7 @@ struct ViewWeight: View {
                     }
                 }.padding(.top, -10)
 
-                Text("What is your current weight?").font(.custom("Inter", size: 25)).padding(.top, 25)
+                Text(Localization.ViewWeight.weight).font(CustomFonts.inter.font(size: 25)).padding(.top, 25)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 20).fill(Color.blue).frame(width: 310, height: 35)
@@ -108,8 +108,7 @@ struct ViewWeight: View {
 
                 } label: {
 
-                    Text("Next")
-                        .font(.custom("Inter", size: 25)).bold()
+                    Text(Localization.ViewWeight.next).font(CustomFonts.inter.font(size: 25)).bold()
                         .padding(EdgeInsets(top: 20, leading: 140, bottom: 20, trailing: 140))
                         .background(Color.accentColor)
                         .foregroundColor(.white)
@@ -121,8 +120,7 @@ struct ViewWeight: View {
 
                 } label: {
 
-                    Text("Skip")
-                        .font(.custom("Inter", size: 18)).bold()
+                    Text(Localization.ViewWeight.skip).font(CustomFonts.inter.font(size: 18)).bold()
                         .padding(.top, 25)
 
                 }

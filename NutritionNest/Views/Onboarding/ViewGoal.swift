@@ -48,10 +48,10 @@ struct ViewGoal: View {
                 }
             }.padding(.top, 30)
 
-            Text("My goals are...").font(.custom("Inter", size: 30)).padding()
-            Text("You may select multiple options").font(.custom("Inter", size: 18)).foregroundColor(.gray)
+            Text(Localization.ViewGoal.mygoal).font(CustomFonts.inter.font(size: 30)).padding()
+            
+            Text(Localization.ViewGoal.muloptions).font(CustomFonts.inter.font(size: 18)).foregroundColor(.gray)
                 .padding(.top, -10)
-                
             Button {
                 if selectedGoal == "Maintain weight" {
                     selectedGoal = nil
@@ -68,8 +68,7 @@ struct ViewGoal: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Maintain weight")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewGoal.maintainweight).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedGoal == "Maintain weight" ? .white : .black)
                 }
@@ -91,8 +90,7 @@ struct ViewGoal: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Gain weight")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewGoal.gainweight).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedGoal == "Gain weight" ? .white : .black)
                 }
@@ -114,8 +112,7 @@ struct ViewGoal: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Lose weight")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewGoal.loseweight).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedGoal == "Lose weight" ? .white : .black)
                 }
@@ -127,8 +124,7 @@ struct ViewGoal: View {
                         .stroke(Color.gray, lineWidth: 1)
                         .frame(width: 250, height: 120)
 
-                    Text("Comment")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewGoal.comment).font(CustomFonts.inter.font(size: 18))
                         .foregroundColor(.black)
                         .offset(x: 20, y: 20)
                 }
@@ -147,8 +143,7 @@ struct ViewGoal: View {
 
             } label: {
 
-                Text("Next")
-                    .font(.custom("Inter", size: 25)).bold()
+                Text(Localization.ViewGoal.next).font(CustomFonts.inter.font(size: 25)).bold()
                     .padding(EdgeInsets(top: 20, leading: 140, bottom: 20, trailing: 140))
                     .background(Color.accentColor)
                     .foregroundColor(.white)
@@ -160,8 +155,7 @@ struct ViewGoal: View {
 
             } label: {
 
-                Text("Skip")
-                    .font(.custom("Inter", size: 18)).bold()
+                Text(Localization.ViewGoal.skip).font(CustomFonts.inter.font(size: 18)).bold()
                     .padding(.top, 25)
                     
             }

@@ -46,8 +46,7 @@ struct ViewGender: View {
                 }
             }.padding(.top, 30)
 
-            Text("I am...").font(.custom("Inter", size: 26)).padding()
-
+            Text(Localization.ViewGender.iam).font(CustomFonts.inter.font(size: 26)).padding()
             Button {
                 if selectedGender == "Male" {
                     selectedGender = nil
@@ -64,9 +63,7 @@ struct ViewGender: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Male")
-                        .font(.custom("Inter", size: 18))
-                        .frame(width: 250, height: 85)
+                    Text(Localization.ViewGender.male).font(CustomFonts.inter.font(size: 18)).frame(width: 250, height: 85)
                         .foregroundColor(selectedGender == "Male" ? .white : .black)
                 }
             }.padding(.top, 60)
@@ -87,8 +84,7 @@ struct ViewGender: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Female")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewGender.female).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedGender == "Female" ? .white : .black)
                 }
@@ -110,8 +106,7 @@ struct ViewGender: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Nonbinary")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewGender.nonbinary).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedGender == "Nonbinary" ? .white : .black)
                 }
@@ -121,8 +116,7 @@ struct ViewGender: View {
 
             } label: {
 
-                Text("Next")
-                    .font(.custom("Inter", size: 25)).bold()
+                Text(Localization.ViewGender.next).font(CustomFonts.inter.font(size: 25)).bold()
                     .padding(EdgeInsets(top: 20, leading: 140, bottom: 20, trailing: 140))
                     .background(Color.accentColor)
                     .foregroundColor(.white)
@@ -134,8 +128,7 @@ struct ViewGender: View {
 
             } label: {
 
-                Text("Skip")
-                    .font(.custom("Inter", size: 18)).bold()
+                Text(Localization.ViewGender.skip).font(CustomFonts.inter.font(size: 18)).bold()
                     .padding(.top, 25)
                     
             }
