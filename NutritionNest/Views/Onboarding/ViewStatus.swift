@@ -48,7 +48,7 @@ struct ViewStatus: View {
                 }
             }.padding(.top, 30)
 
-            Text("How active are you?").font(.custom("Inter", size: 30)).padding()
+            Text(Localization.ViewStatus.status).font(CustomFonts.inter.font(size: 30)).padding()
                             
             Button {
                 if selectedStatus == "Not active" {
@@ -66,8 +66,7 @@ struct ViewStatus: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Not active")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewStatus.notactive).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedStatus == "Not active" ? .white : .black)
                 }
@@ -89,8 +88,7 @@ struct ViewStatus: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Lightly active")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewStatus.lightlyactive).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedStatus == "Lightly active" ? .white : .black)
                 }
@@ -112,8 +110,7 @@ struct ViewStatus: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     
-                    Text("Active")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewStatus.active).font(CustomFonts.inter.font(size: 18))
                         .frame(width: 250, height: 85)
                         .foregroundColor(selectedStatus == "Active" ? .white : .black)
                 }
@@ -125,8 +122,7 @@ struct ViewStatus: View {
                         .stroke(Color.gray, lineWidth: 1)
                         .frame(width: 250, height: 120)
 
-                    Text("Comment")
-                        .font(.custom("Inter", size: 18))
+                    Text(Localization.ViewStatus.comment).font(CustomFonts.inter.font(size: 18))
                         .foregroundColor(.black)
                         .offset(x: 20, y: 20)
                 }
@@ -146,8 +142,7 @@ struct ViewStatus: View {
 
             } label: {
 
-                Text("Next")
-                    .font(.custom("Inter", size: 25)).bold()
+                Text(Localization.ViewStatus.next).font(CustomFonts.inter.font(size: 25)).bold()
                     .padding(EdgeInsets(top: 20, leading: 140, bottom: 20, trailing: 140))
                     .background(Color.accentColor)
                     .foregroundColor(.white)
@@ -159,8 +154,7 @@ struct ViewStatus: View {
 
             } label: {
 
-                Text("Skip")
-                    .font(.custom("Inter", size: 18)).bold()
+                Text(Localization.ViewStatus.skip).font(CustomFonts.inter.font(size: 18)).bold()
                     .padding(.top, 15)
                     
             }

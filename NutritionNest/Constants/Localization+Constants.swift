@@ -21,6 +21,43 @@ enum Localization {
         static let account = Localization.tr("Onboarding.Account", fallback: "Have an account?")
         static let login = Localization.tr("Onboarding.Login", fallback: "Log In")
     }
+    enum ViewGender {
+        static let iam = Localization.tr("ViewGender.Iam", fallback: "I am...")
+        static let male = Localization.tr("ViewGender.Male", fallback: "Male")
+        static let female = Localization.tr("ViewGender.Female", fallback: "Female")
+        static let nonbinary = Localization.tr("ViewGender.Nonbinary", fallback: "Nonbinary")
+        static let next = Localization.tr("ViewGender.Next", fallback: "Next")
+        static let skip = Localization.tr("ViewGender.Skip", fallback: "Skip")
+    }
+    enum ViewGoal {
+        static let mygoal = Localization.tr("ViewGoal.Mygoal", fallback: "My goals are...")
+        static let muloptions = Localization.tr("ViewGoal.Muloptions", fallback: "You may select multiple options")
+        static let maintainweight = Localization.tr("ViewGoal.Maintainweight", fallback: "Maintain weight")
+        static let gainweight = Localization.tr("ViewGoal.Gainweight", fallback: "Gain weight")
+        static let loseweight = Localization.tr("ViewGoal.Loseweight", fallback: "Lose weight")
+        static let comment = Localization.tr("ViewGoal.Comment", fallback: "Comment")
+        static let next = Localization.tr("ViewGoal.Next", fallback: "Next")
+        static let skip = Localization.tr("ViewGoal.Skip", fallback: "Skip")
+    }
+    enum ViewBirthday {
+        static let birthday = Localization.tr("ViewBirthday.Birthday", fallback: "What is your Birthdate?")
+        static let next = Localization.tr("ViewBirthday.Next", fallback: "Next")
+        static let skip = Localization.tr("ViewBirthday.Skip", fallback: "Skip")
+    }
+    enum ViewWeight {
+        static let weight = Localization.tr("ViewWeight.Weight", fallback: "What is your current weight?")
+        static let next = Localization.tr("ViewWeight.Next", fallback: "Next")
+        static let skip = Localization.tr("ViewWeight.Skip", fallback: "Skip")
+    }
+    enum ViewStatus {
+        static let status = Localization.tr("ViewStatus.Status", fallback: "How active are you?")
+        static let notactive = Localization.tr("ViewStatus.Notactive", fallback: "Not active")
+        static let lightlyactive = Localization.tr("ViewStatus.Lightlyactive", fallback: "Lightly active")
+        static let active = Localization.tr("ViewStatus.Active", fallback: "Active")
+        static let comment = Localization.tr("ViewStatus.Comment", fallback: "Comment")
+        static let next = Localization.tr("ViewStatus.Next", fallback: "Next")
+        static let skip = Localization.tr("ViewStatus.Skip", fallback: "Skip")
+    }
     enum SignUp {
         static let title = Localization.tr("SignUp.Title", fallback: "NutritionNest")
         static let message = Localization.tr("SignUp.Message", fallback: "Our AI friend is excited to assist you on your health journey!")
